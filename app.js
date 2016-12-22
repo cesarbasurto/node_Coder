@@ -1,1 +1,770 @@
-var _0x3c1f=["\x2E\x2F\x43\x6F\x6E\x66\x69\x67\x2E\x6A\x73","\x65\x78\x70\x72\x65\x73\x73","\x70\x61\x74\x68","\x66\x6F\x72\x6D\x69\x64\x61\x62\x6C\x65","\x66\x73","\x43\x6F\x6E\x76\x65\x72\x74\x65\x72","\x63\x73\x76\x74\x6F\x6A\x73\x6F\x6E","\x6D\x6F\x6D\x65\x6E\x74","\x63\x72\x79\x70\x74\x6F\x2D\x6A\x73","\x70\x67","\x68\x74\x74\x70","\x73\x6F\x63\x6B\x65\x74\x2E\x69\x6F","\x53\x65\x72\x76\x65\x72\x20\x6C\x69\x73\x74\x65\x6E\x69\x6E\x67\x20\x6F\x6E\x20\x70\x6F\x72\x74\x20","\x6C\x6F\x67","\x6C\x69\x73\x74\x65\x6E","\x31\x65\x72\x66\x32\x61\x35\x66\x31\x65\x38\x37\x67\x31","\x65\x6E\x63","\x63\x6C\x61\x76\x65\x41\x45\x53","\x64\x65\x63\x72\x79\x70\x74","\x41\x45\x53","\x70\x61\x72\x73\x65","\x73\x74\x72\x69\x6E\x67\x69\x66\x79","\x65\x6E\x63\x72\x79\x70\x74","\x63\x78\x50\x47","\x6B\x65\x79\x73","\x6C\x65\x6E\x67\x74\x68","\x74\x72\x69\x6D","\x74\x6F\x55\x70\x70\x65\x72\x43\x61\x73\x65","\x49\x44\x45\x4E\x54\x49\x46\x49\x43\x41\x44\x4F\x52","\x49\x44\x45\x4E\x54","\x49\x44","\x44\x49\x52\x45\x43\x43\x49\x4F\x4E","\x44\x49\x52\x45\x43\x43","\x44\x49\x52\x45\x43","\x44\x52\x43\x4E","\x44\x49\x52","\x58","\x43\x58","\x4C\x4F\x4E","\x4C\x4F\x4E\x47","\x4C\x4F\x4E\x47\x49\x54\x55\x44","\x59","\x43\x59","\x4C\x41\x54","\x4C\x41\x54\x49\x54\x55\x44","\x3B","\x44\x45\x4C\x45\x54\x45\x20\x46\x52\x4F\x4D\x20\x20\x74\x5F\x67\x65\x6F\x63\x6F\x64\x65\x5F\x74\x6D\x70\x5F\x69\x6E\x76\x20\x57\x48\x45\x52\x45\x20\x69\x64\x5F\x75\x73\x72\x20\x3D\x20\x24\x31\x3B","\x45\x72\x72\x6F\x72\x20\x45\x6C\x69\x6D\x69\x6E\x61\x6E\x64\x6F\x20\x64\x61\x74\x6F\x73\x20\x63\x6F\x72\x64\x65\x6E\x61\x64\x61","\x65\x72\x72\x6F\x72","\x74\x69\x74\x75\x6C\x6F\x58","\x43\x6F\x6C\x75\x6D\x6E\x61\x58\x3A\x20","\x74\x69\x74\x75\x6C\x6F\x59","\x43\x6F\x6C\x75\x6D\x6E\x61\x59\x3A\x20","\x74\x69\x74\x75\x6C\x6F\x49\x44","\x65\x72\x72\x6F\x72\x65\x73\x43\x61\x72\x67\x61","\x63\x6F\x6C\x75\x6D\x6E\x58\x59","\x65\x6D\x69\x74","\x74\x6F","\x49\x4E\x53\x45\x52\x54\x20\x49\x4E\x54\x4F\x20\x74\x5F\x67\x65\x6F\x63\x6F\x64\x65\x5F\x74\x6D\x70\x5F\x69\x6E\x76\x28\x69\x64\x5F\x75\x73\x72\x2C\x20\x78\x2C\x20\x79\x2C\x73\x72\x69\x64\x2C\x69\x64\x29\x20\x56\x41\x4C\x55\x45\x53\x20\x28\x24\x31\x2C\x20\x24\x32\x2C\x20\x24\x33\x2C\x20\x24\x34\x2C\x20\x24\x35\x29\x3B","\x2C","\x2E","\x72\x65\x70\x6C\x61\x63\x65","\x45\x72\x72\x6F\x72\x20\x69\x6E\x73\x65\x72\x74\x61\x6E\x64\x6F\x20\x63\x6F\x72\x64\x65\x6E\x61\x64\x61","\x49\x4E\x53\x45\x52\x54\x20\x49\x4E\x54\x4F\x20\x70\x75\x62\x6C\x69\x63\x2E\x74\x5F\x67\x65\x6F\x63\x6F\x64\x65\x5F\x61\x75\x64\x69\x74\x6F\x72\x69\x61\x28\x20\x74\x69\x70\x6F\x2C\x20\x66\x65\x63\x68\x61\x2C\x69\x64\x5F\x75\x73\x75\x61\x72\x69\x6F\x29","\x56\x41\x4C\x55\x45\x53\x20\x28\x27\x49\x6E\x76\x65\x72\x73\x6F\x27\x2C\x6E\x6F\x77\x28\x29\x2C\x20\x27","\x27\x29","\x71\x75\x65\x72\x79","\x74\x65\x72\x6D\x69\x6E\x61\x43\x61\x72\x67\x61","\x49\x6E\x76\x65\x72\x73\x6F","\x66\x6F\x72\x45\x61\x63\x68","\x41\x72\x63\x68\x69\x76\x6F\x20\x4E\x6F\x20\x56\x61\x6C\x69\x64\x6F","\x4A\x73\x6F\x6E\x20\x41\x72\x63\x68\x69\x76\x6F\x3A\x20","\x68\x3A\x6D\x6D\x3A\x73\x3A\x53\x53\x53\x53","\x66\x6F\x72\x6D\x61\x74","\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D\x2D","\x4E\x6F\x20\x73\x65\x20\x70\x75\x64\x6F\x20\x6C\x65\x65\x72\x20\x65\x6C\x20\x61\x72\x63\x68\x69\x76\x6F","\x66\x72\x6F\x6D\x46\x69\x6C\x65","\x44\x45\x4C\x45\x54\x45\x20\x46\x52\x4F\x4D\x20\x20\x74\x5F\x67\x65\x6F\x63\x6F\x64\x65\x5F\x74\x6D\x70\x5F\x64\x69\x72\x20\x57\x48\x45\x52\x45\x20\x69\x64\x5F\x75\x73\x72\x20\x3D\x20\x24\x31\x3B","\x74\x69\x74\x75\x6C\x6F\x44\x49\x52","\x63\x6F\x6C\x75\x6D\x6E\x44\x69\x72","\x49\x4E\x53\x45\x52\x54\x20\x49\x4E\x54\x4F\x20\x74\x5F\x67\x65\x6F\x63\x6F\x64\x65\x5F\x74\x6D\x70\x5F\x64\x69\x72\x28\x69\x64\x5F\x75\x73\x72\x2C\x20\x64\x69\x72\x2C\x69\x64\x29\x20\x56\x41\x4C\x55\x45\x53\x20\x28\x24\x31\x2C\x20\x24\x32\x2C\x20\x24\x33\x29\x3B","\x56\x41\x4C\x55\x45\x53\x20\x28\x27\x44\x69\x72\x65\x63\x74\x6F\x27\x2C\x6E\x6F\x77\x28\x29\x2C\x20\x27","\x27\x29\x3B","\x44\x69\x72\x65\x63\x74\x6F","\x61\x65\x73","\x20\x73\x65\x6C\x65\x63\x74\x20\x69\x64\x2C\x6E\x6F\x6D\x62\x72\x65\x2C\x70\x65\x72\x66\x69\x6C\x20\x66\x72\x6F\x6D\x20\x70\x75\x62\x6C\x69\x63\x2E\x74\x5F\x75\x73\x75\x61\x72\x69\x6F\x20","\x20\x77\x68\x65\x72\x65\x20\x75\x70\x70\x65\x72\x28\x75\x73\x75\x61\x72\x69\x6F\x29\x3D\x75\x70\x70\x65\x72\x28\x27","\x75\x73\x72","\x27\x29\x20\x61\x6E\x64\x20\x63\x6C\x61\x76\x65\x3D\x27","\x70\x61\x73","\x27\x20\x61\x6E\x64\x20\x61\x63\x74\x69\x76\x6F\x3D\x31\x3B","\x65\x72\x72\x6F\x72\x20\x72\x75\x6E\x6E\x69\x6E\x67\x20\x71\x75\x65\x72\x79","\x72\x6F\x77\x73","\x53\x65\x74\x4C\x6F\x67\x69\x6E\x55\x73\x75\x61\x72\x69\x6F","\x69\x64\x53\x6B\x74","","\x73\x65\x6C\x65\x63\x74\x20\x69\x64\x20","\x66\x72\x6F\x6D\x20\x70\x75\x62\x6C\x69\x63\x2E\x74\x5F\x75\x73\x75\x61\x72\x69\x6F\x20","\x77\x68\x65\x72\x65\x20\x69\x64\x3D","\x69\x64","\x20\x61\x6E\x64\x20\x63\x6C\x61\x76\x65\x3D\x27","\x70\x61\x73\x73","\x27\x20\x61\x6E\x64\x20\x61\x63\x74\x69\x76\x6F\x3D\x31\x20","\x75\x70\x64\x61\x74\x65\x20\x70\x75\x62\x6C\x69\x63\x2E\x74\x5F\x75\x73\x75\x61\x72\x69\x6F\x20","\x20\x73\x65\x74\x20\x63\x6C\x61\x76\x65\x3D\x27","\x70\x61\x73\x6E\x65\x77","\x27\x20","\x20\x77\x68\x65\x72\x65\x20\x20\x69\x64\x3D","\x6F\x6B","\x53\x65\x74\x43\x61\x6D\x62\x69\x6F\x55\x73\x75\x61\x72\x69\x6F","\x30","\x53\x45\x4C\x45\x43\x54\x20\x61\x72\x72\x61\x79\x5F\x74\x6F\x5F\x6A\x73\x6F\x6E\x28\x61\x72\x72\x61\x79\x5F\x61\x67\x67\x28\x64\x29\x29\x20\x61\x73\x20\x64\x61\x74\x6F\x73\x20\x46\x52\x4F\x4D\x20\x28\x20","\x53\x45\x4C\x45\x43\x54\x20\x43\x4F\x41\x4C\x45\x53\x43\x45\x28\x72\x6F\x77\x5F\x74\x6F\x5F\x6A\x73\x6F\x6E\x28\x74\x29\x2C\x20\x27\x5B\x5D\x27\x29\x20\x61\x73\x20\x64\x61\x74\x6F\x73\x20\x46\x52\x4F\x4D\x20","\x28\x20","\x73\x65\x6C\x65\x63\x74\x20\x75\x2E\x69\x64\x2C\x75\x2E\x6E\x6F\x6D\x62\x72\x65\x2C\x75\x73\x75\x61\x72\x69\x6F\x2C\x75\x2E\x63\x6C\x61\x76\x65\x2C\x70\x2E\x70\x65\x72\x66\x69\x6C\x2C\x75\x2E\x70\x65\x72\x66\x69\x6C\x20\x69\x64\x5F\x70\x65\x72\x66\x69\x6C\x2C\x61\x63\x74\x69\x76\x6F\x20\x69\x64\x5F\x61\x63\x74\x69\x76\x6F\x2C\x43\x41\x53\x45\x20\x57\x48\x45\x4E\x20\x28\x61\x63\x74\x69\x76\x6F\x20\x3D\x20\x31\x29\x20\x54\x48\x45\x4E\x20\x27\x53\x69\x27\x20\x45\x4C\x53\x45\x20\x27\x4E\x6F\x27\x20\x45\x4E\x44\x20\x41\x53\x20\x61\x63\x74\x69\x76\x6F\x20","\x66\x72\x6F\x6D\x20\x74\x5F\x75\x73\x75\x61\x72\x69\x6F\x20\x75\x20\x69\x6E\x6E\x65\x72\x20\x6A\x6F\x69\x6E\x20\x70\x5F\x70\x65\x72\x66\x69\x6C\x20\x70\x20\x6F\x6E\x20\x75\x2E\x70\x65\x72\x66\x69\x6C\x20\x3D\x20\x70\x2E\x69\x64\x20\x77\x68\x65\x72\x65\x20\x75\x2E\x70\x65\x72\x66\x69\x6C\x3C\x3E\x33\x20\x6F\x72\x64\x65\x72\x20\x62\x79\x20\x75\x73\x75\x61\x72\x69\x6F","\x29\x74","\x29\x64","\x55\x73\x72\x73","\x64\x61\x74\x6F\x73","\x49\x4E\x53\x45\x52\x54\x20\x49\x4E\x54\x4F\x20\x70\x75\x62\x6C\x69\x63\x2E\x74\x5F\x75\x73\x75\x61\x72\x69\x6F\x20\x28\x6E\x6F\x6D\x62\x72\x65\x2C\x75\x73\x75\x61\x72\x69\x6F\x2C\x63\x6C\x61\x76\x65\x2C\x61\x63\x74\x69\x76\x6F\x2C\x70\x65\x72\x66\x69\x6C\x29\x20\x56\x41\x4C\x55\x45\x53\x20\x28\x27","\x6E\x6F\x6D\x62\x72\x65","\x27\x2C\x27","\x75\x73\x75\x61\x72\x69\x6F","\x63\x6C\x61\x76\x65","\x27\x2C\x27\x31\x27\x2C\x27","\x70\x65\x72\x66\x69\x6C","\x73\x65\x74\x55\x73\x75\x61\x72\x69\x6F\x52\x65\x73\x70","\x55\x50\x44\x41\x54\x45\x20\x70\x75\x62\x6C\x69\x63\x2E\x74\x5F\x75\x73\x75\x61\x72\x69\x6F\x20\x53\x45\x54\x20\x6E\x6F\x6D\x62\x72\x65\x3D\x27","\x27\x2C\x75\x73\x75\x61\x72\x69\x6F\x3D\x27","\x27\x2C\x63\x6C\x61\x76\x65\x3D\x27","\x27\x2C\x61\x63\x74\x69\x76\x6F\x3D\x27","\x61\x63\x74\x69\x76\x6F","\x27\x2C\x70\x65\x72\x66\x69\x6C\x3D\x27","\x27\x20\x57\x48\x45\x52\x45\x20\x69\x64\x20\x3D\x27","\x27","\x75\x70\x64\x55\x73\x75\x61\x72\x69\x6F\x52\x65\x73\x70","\x73\x65\x6C\x65\x63\x74\x20\x61\x63\x74\x69\x76\x6F\x20\x66\x72\x6F\x6D\x20\x70\x75\x62\x6C\x69\x63\x2E\x74\x5F\x75\x73\x75\x61\x72\x69\x6F\x20\x57\x48\x45\x52\x45\x20\x69\x64\x20\x3D\x27","\x64\x65\x6C\x55\x73\x75\x61\x72\x69\x6F\x52\x65\x73\x70","\x31","\x55\x50\x44\x41\x54\x45\x20\x70\x75\x62\x6C\x69\x63\x2E\x74\x5F\x75\x73\x75\x61\x72\x69\x6F\x20\x53\x45\x54\x20\x61\x63\x74\x69\x76\x6F\x3D\x30\x20\x57\x48\x45\x52\x45\x20\x69\x64\x20\x3D\x27","\x55\x50\x44\x41\x54\x45\x20\x70\x75\x62\x6C\x69\x63\x2E\x74\x5F\x75\x73\x75\x61\x72\x69\x6F\x20\x53\x45\x54\x20\x61\x63\x74\x69\x76\x6F\x3D\x31\x20\x57\x48\x45\x52\x45\x20\x69\x64\x20\x3D\x27","\x73\x65\x6C\x65\x63\x74\x20\x74\x69\x70\x6F\x20","\x20\x66\x72\x6F\x6D\x20\x70\x75\x62\x6C\x69\x63\x2E\x74\x5F\x67\x65\x6F\x63\x6F\x64\x65\x5F\x61\x75\x64\x69\x74\x6F\x72\x69\x61\x20","\x20\x77\x68\x65\x72\x65\x20\x66\x65\x63\x68\x61\x3D\x28\x73\x65\x6C\x65\x63\x74\x20\x6D\x61\x78\x28\x66\x65\x63\x68\x61\x29\x20\x66\x72\x6F\x6D\x20\x70\x75\x62\x6C\x69\x63\x2E\x74\x5F\x67\x65\x6F\x63\x6F\x64\x65\x5F\x61\x75\x64\x69\x74\x6F\x72\x69\x61\x20\x77\x68\x65\x72\x65\x20\x20\x69\x64\x5F\x75\x73\x75\x61\x72\x69\x6F\x3D","\x29\x3B","\x74\x69\x70\x6F","\x53\x65\x74\x53\x69\x6E\x44\x61\x74\x6F\x73","\x6E\x6F\x20\x64\x61\x74\x61","\x73\x65\x6C\x65\x63\x74\x20\x66\x75\x6E\x63\x2E\x67\x65\x74\x5F\x67\x65\x6F\x5F\x64\x69\x72\x65\x63\x74\x61\x28\x27","\x64\x65\x76\x75\x65\x6C\x76\x65\x20\x64\x61\x74\x6F\x73","\x64\x65\x76\x75\x65\x6C\x76\x65\x20\x64\x61\x74\x6F\x73\x20\x44\x69\x72\x65\x63\x74\x6F","\x53\x65\x74\x4A\x73\x6F\x6E\x44\x69\x72\x65\x63\x74\x6F","\x73\x65\x6C\x65\x63\x74\x20\x66\x75\x6E\x63\x2E\x67\x65\x74\x5F\x67\x65\x6F\x5F\x69\x6E\x76\x65\x72\x73\x61\x28\x27","\x64\x65\x76\x75\x65\x6C\x76\x65\x20\x64\x61\x74\x6F\x73\x20\x49\x6E\x76\x65\x73\x6F","\x53\x65\x74\x4A\x73\x6F\x6E\x49\x6E\x76\x65\x72\x73\x6F","\x70\x75\x62\x6C\x69\x63","\x6A\x6F\x69\x6E","\x73\x74\x61\x74\x69\x63","\x75\x73\x65","\x2F","\x76\x69\x65\x77\x73\x2F\x69\x6E\x64\x65\x78\x2E\x68\x74\x6D\x6C","\x73\x65\x6E\x64\x46\x69\x6C\x65","\x67\x65\x74","\x2F\x67\x65\x6F","\x76\x69\x65\x77\x73\x2F\x67\x65\x6F\x2E\x68\x74\x6D\x6C","\x2F\x75\x70\x6C\x6F\x61\x64\x49\x6E\x76\x65\x72\x73\x6F\x2F\x3A\x69\x64\x5F\x75\x73\x72\x2F\x3A\x73\x72\x69\x64\x2F\x3A\x69\x64\x53\x6B\x74","\x69\x64\x5F\x75\x73\x72","\x70\x61\x72\x61\x6D\x73","\x55\x73\x75\x61\x72\x69\x6F\x3A\x20","\x73\x72\x69\x64","\x53\x52\x49\x44\x3A\x20","\x6D\x75\x6C\x74\x69\x70\x6C\x65\x73","\x75\x70\x6C\x6F\x61\x64\x44\x69\x72","\x2F\x75\x70\x6C\x6F\x61\x64\x73","\x66\x69\x6C\x65","\x6E\x61\x6D\x65","\x72\x65\x6E\x61\x6D\x65","\x6F\x6E","\x41\x6E\x20\x65\x72\x72\x6F\x72\x20\x68\x61\x73\x20\x6F\x63\x63\x75\x72\x65\x64\x3A\x20\x0A","\x65\x6E\x64","\x6C\x65\x65\x72\x41\x72\x63\x68\x69\x76\x6F","\x70\x6F\x73\x74","\x2F\x75\x70\x6C\x6F\x61\x64\x44\x69\x72\x65\x63\x74\x6F\x2F\x3A\x69\x64\x5F\x75\x73\x72\x2F\x3A\x69\x64\x53\x6B\x74","\x69\x64\x53\x6B\x74\x3A\x20","\x6C\x65\x65\x72\x41\x72\x63\x68\x69\x76\x6F\x44\x69\x72\x65\x63\x74\x6F","\x63\x6F\x6E\x6E\x65\x63\x74\x69\x6F\x6E","\x63\x6F\x6E\x65\x63\x74\x61\x20\x69\x64","\x4C\x6F\x67\x69\x6E\x55\x73\x75\x61\x72\x69\x6F","\x6C\x6F\x67\x69\x6E","\x43\x61\x6D\x62\x69\x6F\x50\x61\x73\x73","\x47\x65\x74\x4A\x73\x6F\x6E","\x49\x6E\x67\x72\x65\x73\x61\x20\x61\x20\x47\x65\x74\x4A\x73\x6F\x6E","\x6C\x69\x73\x74\x61\x55\x73\x75\x61\x72\x69\x6F","\x67\x65\x74\x55\x73\x75\x61\x72\x69\x6F\x73","\x73\x65\x74\x55\x73\x75\x61\x72\x69\x6F","\x61\x64\x64\x55\x73\x75\x61\x72\x69\x6F","\x75\x70\x64\x55\x73\x75\x61\x72\x69\x6F","\x64\x65\x6C\x55\x73\x75\x61\x72\x69\x6F","\x49\x6E\x64\x69\x76\x69\x64\x75\x61\x6C\x49\x6E\x76","\x73\x65\x74\x49\x6E\x64\x49\x6E\x76","\x49\x6E\x64\x69\x76\x69\x64\x75\x61\x6C\x44\x69\x72","\x73\x65\x74\x49\x6E\x64\x44\x69\x72","\x78","\x79","\x64\x69\x72"];var ConfigModule=require(_0x3c1f[0]);var express=require(_0x3c1f[1]);var app=express();var path=require(_0x3c1f[2]);var formidable=require(_0x3c1f[3]);var fs=require(_0x3c1f[4]);var Converter=require(_0x3c1f[6])[_0x3c1f[5]];var moment=require(_0x3c1f[7]);var CryptoJS=require(_0x3c1f[8]);var pg=require(_0x3c1f[9]);var http=require(_0x3c1f[10]).Server(app);var io=require(_0x3c1f[11])(http);var cxPG=ConfigModule.GetPG();var cxPort=ConfigModule.GetPort();http[_0x3c1f[14]](cxPort,function(){console[_0x3c1f[13]](_0x3c1f[12]+ cxPort)});var Config={cxPG:cxPG,claveAES:_0x3c1f[15]};var Func={Decrypted:function(_0x21c8x11){var _0x21c8x12=JSON[_0x3c1f[20]](CryptoJS[_0x3c1f[19]][_0x3c1f[18]](_0x21c8x11,Config[_0x3c1f[17]]).toString(CryptoJS[_0x3c1f[16]].Utf8));return _0x21c8x12},Ecrypted:function(_0x21c8x13){var _0x21c8x14=CryptoJS[_0x3c1f[19]][_0x3c1f[22]](JSON[_0x3c1f[21]](_0x21c8x13),Config[_0x3c1f[17]]);return _0x21c8x14.toString()}};var pool= new pg.Pool(Config[_0x3c1f[23]]);var dataReadCVS={tituloID:function(_0x21c8x17){var _0x21c8x18=undefined;var _0x21c8x19=Object[_0x3c1f[24]](_0x21c8x17);for(var _0x21c8x1a=0;_0x21c8x1a< _0x21c8x19[_0x3c1f[25]];_0x21c8x1a++){console[_0x3c1f[13]](_0x21c8x19[_0x21c8x1a]);var _0x21c8x1b=_0x21c8x19[_0x21c8x1a].toString()[_0x3c1f[27]]()[_0x3c1f[26]]();if(_0x21c8x1b== _0x3c1f[28]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[29]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[30]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break}};if(_0x21c8x18== undefined){for(var _0x21c8x1a=0;_0x21c8x1a< _0x21c8x19[_0x3c1f[25]];_0x21c8x1a++){var _0x21c8x1b=_0x21c8x17[_0x21c8x19[_0x21c8x1a]].toString()[_0x3c1f[27]]()[_0x3c1f[26]]();if(_0x21c8x1b== _0x3c1f[28]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[29]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[30]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break}}};return _0x21c8x18},tituloDIR:function(_0x21c8x17){var _0x21c8x18=undefined;var _0x21c8x19=Object[_0x3c1f[24]](_0x21c8x17);for(var _0x21c8x1a=0;_0x21c8x1a< _0x21c8x19[_0x3c1f[25]];_0x21c8x1a++){var _0x21c8x1b=_0x21c8x19[_0x21c8x1a].toString()[_0x3c1f[27]]()[_0x3c1f[26]]();if(_0x21c8x1b== _0x3c1f[31]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[32]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[33]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[34]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[35]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break}};if(_0x21c8x18== undefined){for(var _0x21c8x1a=0;_0x21c8x1a< _0x21c8x19[_0x3c1f[25]];_0x21c8x1a++){var _0x21c8x1b=_0x21c8x17[_0x21c8x19[_0x21c8x1a]].toString()[_0x3c1f[27]]()[_0x3c1f[26]]();if(_0x21c8x1b== _0x3c1f[31]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[32]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[33]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[34]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[35]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break}}};return _0x21c8x18},tituloX:function(_0x21c8x17){var _0x21c8x18=undefined;var _0x21c8x19=Object[_0x3c1f[24]](_0x21c8x17);for(var _0x21c8x1a=0;_0x21c8x1a< _0x21c8x19[_0x3c1f[25]];_0x21c8x1a++){var _0x21c8x1b=_0x21c8x19[_0x21c8x1a].toString()[_0x3c1f[27]]()[_0x3c1f[26]]();if(_0x21c8x1b== _0x3c1f[36]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[37]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[38]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[39]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[40]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break}};if(_0x21c8x18== undefined){for(var _0x21c8x1a=0;_0x21c8x1a< _0x21c8x19[_0x3c1f[25]];_0x21c8x1a++){var _0x21c8x1b=_0x21c8x17[_0x21c8x19[_0x21c8x1a]].toString()[_0x3c1f[27]]()[_0x3c1f[26]]();if(_0x21c8x1b== _0x3c1f[36]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[37]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[38]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[39]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1b== _0x3c1f[40]){_0x21c8x18= _0x21c8x19[_0x21c8x1a];break}}};return _0x21c8x18},tituloY:function(_0x21c8x17){var _0x21c8x1c=undefined;var _0x21c8x19=Object[_0x3c1f[24]](_0x21c8x17);for(var _0x21c8x1a=0;_0x21c8x1a< _0x21c8x19[_0x3c1f[25]];_0x21c8x1a++){var _0x21c8x1d=_0x21c8x19[_0x21c8x1a].toString()[_0x3c1f[27]]()[_0x3c1f[26]]();if(_0x21c8x1d== _0x3c1f[41]){_0x21c8x1c= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1d== _0x3c1f[42]){_0x21c8x1c= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1d== _0x3c1f[43]){_0x21c8x1c= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1d== _0x3c1f[44]){_0x21c8x1c= _0x21c8x19[_0x21c8x1a];break}};if(_0x21c8x1c== undefined){for(var _0x21c8x1a=0;_0x21c8x1a< _0x21c8x19[_0x3c1f[25]];_0x21c8x1a++){var _0x21c8x1d=_0x21c8x17[_0x21c8x19[_0x21c8x1a]].toString()[_0x3c1f[27]]()[_0x3c1f[26]]();if(_0x21c8x1d== _0x3c1f[41]){_0x21c8x1c= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1d== _0x3c1f[42]){_0x21c8x1c= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1d== _0x3c1f[43]){_0x21c8x1c= _0x21c8x19[_0x21c8x1a];break};if(_0x21c8x1d== _0x3c1f[44]){_0x21c8x1c= _0x21c8x19[_0x21c8x1a];break}}};return _0x21c8x1c},leerArchivo:function(_0x21c8x1e,_0x21c8x1f,_0x21c8x20,_0x21c8x21){console[_0x3c1f[13]](_0x21c8x1e);var _0x21c8x22= new Converter({constructResult:true,delimiter:_0x3c1f[45],ignoreEmpty:true,checkColumn:true,noheader:false});_0x21c8x22[_0x3c1f[76]](_0x21c8x1e,function(_0x21c8x23,_0x21c8x24){var _0x21c8x25=0,_0x21c8x26=0;if(_0x21c8x24!= undefined){if(_0x21c8x24[_0x3c1f[25]]> 0){var _0x21c8x27={};var _0x21c8x28,_0x21c8x29,_0x21c8x2a;pool[_0x3c1f[66]](_0x3c1f[46],[_0x21c8x1f],function(_0x21c8x23,_0x21c8x2b){if(_0x21c8x23){return console[_0x3c1f[48]](_0x3c1f[47],_0x21c8x23)};try{_0x21c8x24[_0x3c1f[69]](function(_0x21c8x17){if(_0x21c8x26== 0){_0x21c8x28= dataReadCVS[_0x3c1f[49]](_0x21c8x17);console[_0x3c1f[13]](_0x3c1f[50]+ _0x21c8x28);_0x21c8x29= dataReadCVS[_0x3c1f[51]](_0x21c8x17);console[_0x3c1f[13]](_0x3c1f[52]+ _0x21c8x29);_0x21c8x2a= dataReadCVS[_0x3c1f[53]](_0x21c8x17);console[_0x3c1f[13]](_0x3c1f[52]+ _0x21c8x2a)};if(_0x21c8x28== undefined|| _0x21c8x29== undefined|| _0x21c8x2a== undefined){io[_0x3c1f[57]](_0x21c8x21)[_0x3c1f[56]](_0x3c1f[54],_0x3c1f[55]);throw _0x21c8x27}else {_0x21c8x26++;if(_0x21c8x17[_0x21c8x28]!= null&& _0x21c8x17[_0x21c8x29]!= null){pool[_0x3c1f[66]](_0x3c1f[58],[_0x21c8x1f,_0x21c8x17[_0x21c8x28].toString()[_0x3c1f[61]](_0x3c1f[59],_0x3c1f[60]),_0x21c8x17[_0x21c8x29].toString()[_0x3c1f[61]](_0x3c1f[59],_0x3c1f[60]),_0x21c8x20,_0x21c8x17[_0x21c8x2a]],function(_0x21c8x23,_0x21c8x2b){if(_0x21c8x23){return console[_0x3c1f[48]](_0x3c1f[62],_0x21c8x23)};_0x21c8x25++;if(_0x21c8x25== _0x21c8x24[_0x3c1f[25]]){var _0x21c8x2c=_0x3c1f[63]+ _0x3c1f[64]+ _0x21c8x1f+ _0x3c1f[65];pool[_0x3c1f[66]](_0x21c8x2c,function(_0x21c8x23,_0x21c8x2d){});io[_0x3c1f[57]](_0x21c8x21)[_0x3c1f[56]](_0x3c1f[67],_0x3c1f[68])}})}}})}catch(e){console[_0x3c1f[13]](e);console[_0x3c1f[13]](_0x3c1f[70]);if(e!== _0x21c8x27){throw e}}});console[_0x3c1f[13]](_0x3c1f[71]+ moment()[_0x3c1f[73]](_0x3c1f[72]));console[_0x3c1f[13]](_0x3c1f[74])}}else {console[_0x3c1f[13]](_0x3c1f[75])}})},leerArchivoDirecto:function(_0x21c8x1e,_0x21c8x1f,_0x21c8x21){console[_0x3c1f[13]](_0x21c8x1e);var _0x21c8x22= new Converter({constructResult:true,delimiter:_0x3c1f[45],ignoreEmpty:true,checkColumn:true,noheader:false});_0x21c8x22[_0x3c1f[76]](_0x21c8x1e,function(_0x21c8x23,_0x21c8x24){var _0x21c8x25=0,_0x21c8x26=0;if(_0x21c8x24!= undefined){if(_0x21c8x24[_0x3c1f[25]]> 0){var _0x21c8x27={};var _0x21c8x2e,_0x21c8x2a;pool[_0x3c1f[66]](_0x3c1f[77],[_0x21c8x1f],function(_0x21c8x23,_0x21c8x2b){if(_0x21c8x23){return console[_0x3c1f[48]](_0x3c1f[47],_0x21c8x23)};try{_0x21c8x24[_0x3c1f[69]](function(_0x21c8x17){if(_0x21c8x26== 0){_0x21c8x2e= dataReadCVS[_0x3c1f[78]](_0x21c8x17);_0x21c8x2a= dataReadCVS[_0x3c1f[53]](_0x21c8x17)};_0x21c8x26++;if(_0x21c8x2e== undefined|| _0x21c8x2a== undefined){io[_0x3c1f[57]](_0x21c8x21)[_0x3c1f[56]](_0x3c1f[54],_0x3c1f[79]);throw _0x21c8x27}else {if(_0x21c8x17[_0x21c8x2e]!= null){pool[_0x3c1f[66]](_0x3c1f[80],[_0x21c8x1f,_0x21c8x17[_0x21c8x2e].toString(),_0x21c8x17[_0x21c8x2a]],function(_0x21c8x23,_0x21c8x2b){if(_0x21c8x23){return console[_0x3c1f[48]](_0x3c1f[62],_0x21c8x23)};_0x21c8x25++;if(_0x21c8x25== _0x21c8x24[_0x3c1f[25]]){var _0x21c8x2c=_0x3c1f[63]+ _0x3c1f[81]+ _0x21c8x1f+ _0x3c1f[82];pool[_0x3c1f[66]](_0x21c8x2c,function(_0x21c8x23,_0x21c8x2d){});io[_0x3c1f[57]](_0x21c8x21)[_0x3c1f[56]](_0x3c1f[67],_0x3c1f[83])}})}}})}catch(e){console[_0x3c1f[13]](e);console[_0x3c1f[13]](_0x3c1f[70]);if(e!== _0x21c8x27){throw e}}});console[_0x3c1f[13]](_0x3c1f[71]+ moment()[_0x3c1f[73]](_0x3c1f[72]));console[_0x3c1f[13]](_0x3c1f[74])}}else {console[_0x3c1f[13]](_0x3c1f[75])}})}};var acceso={login:function(_0x21c8x30){var _0x21c8x31=Func.Decrypted(_0x21c8x30[_0x3c1f[84]]);console[_0x3c1f[13]](_0x21c8x31);var _0x21c8x2c=_0x3c1f[85]+ _0x3c1f[86]+ _0x21c8x31[_0x3c1f[87]]+ _0x3c1f[88]+ _0x21c8x31[_0x3c1f[89]]+ _0x3c1f[90];console[_0x3c1f[13]](_0x21c8x2c);pool[_0x3c1f[66]](_0x21c8x2c,function(_0x21c8x23,_0x21c8x2b){if(_0x21c8x23){return console[_0x3c1f[48]](_0x3c1f[91],_0x21c8x23)};console[_0x3c1f[13]](_0x21c8x2b[_0x3c1f[92]][0]);if(_0x21c8x2b[_0x3c1f[92]][0]){var _0x21c8x13=Func.Ecrypted(_0x21c8x2b[_0x3c1f[92]][0]);io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[93],_0x21c8x13)}else {io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[93],_0x3c1f[95])}})},CambioClave:function(_0x21c8x30){var _0x21c8x31=Func.Decrypted(_0x21c8x30[_0x3c1f[84]]);console[_0x3c1f[13]](_0x21c8x31);var _0x21c8x2c=_0x3c1f[96]+ _0x3c1f[97]+ _0x3c1f[98]+ _0x21c8x31[_0x3c1f[99]]+ _0x3c1f[100]+ _0x21c8x31[_0x3c1f[101]]+ _0x3c1f[102];pool[_0x3c1f[66]](_0x21c8x2c,function(_0x21c8x23,_0x21c8x2b){if(_0x21c8x23){return console[_0x3c1f[48]](_0x3c1f[91],_0x21c8x23)};if(_0x21c8x2b[_0x3c1f[92]][0]){var _0x21c8x2c=_0x3c1f[103]+ _0x3c1f[104]+ _0x21c8x31[_0x3c1f[105]]+ _0x3c1f[106]+ _0x3c1f[107]+ _0x21c8x31[_0x3c1f[99]];console[_0x3c1f[13]](_0x21c8x2c);pool[_0x3c1f[66]](_0x21c8x2c,function(_0x21c8x23,_0x21c8x2b){var _0x21c8x13=Func.Ecrypted({cambio:_0x3c1f[108]});io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[109],_0x21c8x13)})}else {var _0x21c8x13=Func.Ecrypted({cambio:_0x3c1f[110]});io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[109],_0x21c8x13)}})},getUsuarios:function(_0x21c8x30){var _0x21c8x2c=_0x3c1f[111]+ _0x3c1f[112]+ _0x3c1f[113]+ _0x3c1f[114]+ _0x3c1f[115]+ _0x3c1f[116]+ _0x3c1f[117];pool[_0x3c1f[66]](_0x21c8x2c,function(_0x21c8x23,_0x21c8x32){if(_0x21c8x23){return console[_0x3c1f[48]](_0x3c1f[91],_0x21c8x23)};io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[118],_0x21c8x32[_0x3c1f[92]][0][_0x3c1f[119]])})},addUsuario:function(_0x21c8x30){var _0x21c8x31=Func.Decrypted(_0x21c8x30[_0x3c1f[84]]);console[_0x3c1f[13]](_0x21c8x31);var _0x21c8x2c=_0x3c1f[120]+ _0x21c8x31[_0x3c1f[121]]+ _0x3c1f[122]+ _0x21c8x31[_0x3c1f[123]]+ _0x3c1f[122]+ _0x21c8x31[_0x3c1f[124]]+ _0x3c1f[125]+ _0x21c8x31[_0x3c1f[126]]+ _0x3c1f[65];console[_0x3c1f[13]](_0x21c8x2c);pool[_0x3c1f[66]](_0x21c8x2c,function(_0x21c8x23,_0x21c8x2b){if(_0x21c8x23){var _0x21c8x13=Func.Ecrypted({resp:_0x21c8x23});io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[127],_0x21c8x13);return console[_0x3c1f[48]](_0x3c1f[91],_0x21c8x23)};var _0x21c8x13=Func.Ecrypted({resp:_0x3c1f[108]});io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[127],_0x21c8x13)})},updUsuario:function(_0x21c8x30){var _0x21c8x31=Func.Decrypted(_0x21c8x30[_0x3c1f[84]]);console[_0x3c1f[13]](_0x21c8x31);var _0x21c8x2c=_0x3c1f[128]+ _0x21c8x31[_0x3c1f[121]]+ _0x3c1f[129]+ _0x21c8x31[_0x3c1f[123]]+ _0x3c1f[130]+ _0x21c8x31[_0x3c1f[124]]+ _0x3c1f[131]+ _0x21c8x31[_0x3c1f[132]]+ _0x3c1f[133]+ _0x21c8x31[_0x3c1f[126]]+ _0x3c1f[134]+ _0x21c8x31[_0x3c1f[99]]+ _0x3c1f[135];console[_0x3c1f[13]](_0x21c8x2c);pool[_0x3c1f[66]](_0x21c8x2c,function(_0x21c8x23,_0x21c8x2b){if(_0x21c8x23){var _0x21c8x13=Func.Ecrypted({resp:_0x21c8x23});io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[136],_0x21c8x13);return console[_0x3c1f[48]](_0x3c1f[91],_0x21c8x23)};var _0x21c8x13=Func.Ecrypted({resp:_0x3c1f[108]});io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[136],_0x21c8x13)})},delUsuario:function(_0x21c8x30){var _0x21c8x31=Func.Decrypted(_0x21c8x30[_0x3c1f[84]]);console[_0x3c1f[13]](_0x21c8x31);var _0x21c8x2c=_0x3c1f[137]+ _0x21c8x31[_0x3c1f[99]]+ _0x3c1f[135];console[_0x3c1f[13]](_0x21c8x2c);pool[_0x3c1f[66]](_0x21c8x2c,function(_0x21c8x23,_0x21c8x2b){if(_0x21c8x23){var _0x21c8x13=Func.Ecrypted({resp:_0x21c8x23});io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[138],_0x21c8x13);return console[_0x3c1f[48]](_0x3c1f[91],_0x21c8x23)};var _0x21c8x2c=_0x3c1f[95];if(_0x21c8x2b[_0x3c1f[92]][0][_0x3c1f[132]]== _0x3c1f[139]){_0x21c8x2c= _0x3c1f[140]+ _0x21c8x31[_0x3c1f[99]]+ _0x3c1f[135]}else {_0x21c8x2c= _0x3c1f[141]+ _0x21c8x31[_0x3c1f[99]]+ _0x3c1f[135]};pool[_0x3c1f[66]](_0x21c8x2c,function(_0x21c8x23,_0x21c8x2b){if(_0x21c8x23){var _0x21c8x13=Func.Ecrypted({resp:_0x21c8x23});io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[138],_0x21c8x13);return console[_0x3c1f[48]](_0x3c1f[91],_0x21c8x23)};var _0x21c8x13=Func.Ecrypted({resp:_0x3c1f[108]});io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[138],_0x21c8x13)});var _0x21c8x13=Func.Ecrypted({resp:_0x3c1f[108]});io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[138],_0x21c8x13)})}};var GeoCode={GetJson:function(_0x21c8x30){_this= this;var _0x21c8x31=Func.Decrypted(_0x21c8x30[_0x3c1f[84]]);var _0x21c8x2c=_0x3c1f[142]+ _0x3c1f[143]+ _0x3c1f[144]+ _0x21c8x31[_0x3c1f[99]]+ _0x3c1f[145];console[_0x3c1f[13]](_0x21c8x2c);pool[_0x3c1f[66]](_0x21c8x2c,function(_0x21c8x23,_0x21c8x2b){if(_0x21c8x23){return console[_0x3c1f[48]](_0x3c1f[91],_0x21c8x23)};if(_0x21c8x2b[_0x3c1f[92]][0]){if(_0x21c8x2b[_0x3c1f[92]][0][_0x3c1f[146]]== _0x3c1f[68]){_this.GetJsonInverso(_0x21c8x30)}else {if(_0x21c8x2b[_0x3c1f[92]][0][_0x3c1f[146]]== _0x3c1f[83]){_this.GetJsonDirecto(_0x21c8x30)}}}else {io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[147],_0x3c1f[148])}})},GetJsonDirecto:function(_0x21c8x30){var _0x21c8x31=Func.Decrypted(_0x21c8x30[_0x3c1f[84]]);var _0x21c8x2c=_0x3c1f[149]+ _0x21c8x31[_0x3c1f[99]]+ _0x3c1f[82];console[_0x3c1f[13]](_0x21c8x2c);pool[_0x3c1f[66]](_0x21c8x2c,function(_0x21c8x23,_0x21c8x2b){if(_0x21c8x23){return console[_0x3c1f[48]](_0x3c1f[91],_0x21c8x23)};console[_0x3c1f[13]](_0x3c1f[150]);if(_0x21c8x2b[_0x3c1f[92]][0]){var _0x21c8x13=Func.Ecrypted(_0x21c8x2b[_0x3c1f[92]][0]);console[_0x3c1f[13]](_0x3c1f[151]);io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[152],_0x21c8x13)}else {var _0x21c8x13=Func.Ecrypted({cambio:_0x3c1f[110]});io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[152],_0x21c8x13)}})},GetJsonInverso:function(_0x21c8x30){var _0x21c8x31=Func.Decrypted(_0x21c8x30[_0x3c1f[84]]);var _0x21c8x2c=_0x3c1f[153]+ _0x21c8x31[_0x3c1f[99]]+ _0x3c1f[82];console[_0x3c1f[13]](_0x21c8x2c);pool[_0x3c1f[66]](_0x21c8x2c,function(_0x21c8x23,_0x21c8x2b){if(_0x21c8x23){return console[_0x3c1f[48]](_0x3c1f[91],_0x21c8x23)};console[_0x3c1f[13]](_0x3c1f[150]);if(_0x21c8x2b[_0x3c1f[92]][0]){var _0x21c8x13=Func.Ecrypted(_0x21c8x2b[_0x3c1f[92]][0]);console[_0x3c1f[13]](_0x3c1f[154]);io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[155],_0x21c8x13)}else {var _0x21c8x13=Func.Ecrypted({cambio:_0x3c1f[110]});io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[155],_0x21c8x13)}})},InitData:function(){app[_0x3c1f[159]](express[_0x3c1f[158]](path[_0x3c1f[157]](__dirname,_0x3c1f[156])));app[_0x3c1f[163]](_0x3c1f[160],function(_0x21c8x34,_0x21c8x32){_0x21c8x32[_0x3c1f[162]](path[_0x3c1f[157]](__dirname,_0x3c1f[161]))});app[_0x3c1f[163]](_0x3c1f[164],function(_0x21c8x34,_0x21c8x32){_0x21c8x32[_0x3c1f[162]](path[_0x3c1f[157]](__dirname,_0x3c1f[165]))});app[_0x3c1f[182]](_0x3c1f[166],function(_0x21c8x34,_0x21c8x32){var _0x21c8x1f=_0x21c8x34[_0x3c1f[168]][_0x3c1f[167]];console[_0x3c1f[13]](_0x3c1f[169]+ _0x21c8x1f);var _0x21c8x20=_0x21c8x34[_0x3c1f[168]][_0x3c1f[170]];console[_0x3c1f[13]](_0x3c1f[171]+ _0x21c8x20);var _0x21c8x21=_0x21c8x34[_0x3c1f[168]][_0x3c1f[94]];console[_0x3c1f[13]](_0x3c1f[171]+ _0x21c8x21);var _0x21c8x35= new formidable.IncomingForm();var _0x21c8x1e,_0x21c8x36;_0x21c8x35[_0x3c1f[172]]= true;_0x21c8x35[_0x3c1f[173]]= path[_0x3c1f[157]](__dirname,_0x3c1f[174]);_0x21c8x35[_0x3c1f[178]](_0x3c1f[175],function(_0x21c8x37,_0x21c8x38){fs[_0x3c1f[177]](_0x21c8x38[_0x3c1f[2]],path[_0x3c1f[157]](_0x21c8x35[_0x3c1f[173]],_0x21c8x38[_0x3c1f[176]]));_0x21c8x36= _0x21c8x38[_0x3c1f[176]];_0x21c8x1e= path[_0x3c1f[157]](_0x21c8x35[_0x3c1f[173]],_0x21c8x36)});_0x21c8x35[_0x3c1f[178]](_0x3c1f[48],function(_0x21c8x23){console[_0x3c1f[13]](_0x3c1f[179]+ _0x21c8x23)});_0x21c8x35[_0x3c1f[178]](_0x3c1f[180],function(){_0x21c8x32[_0x3c1f[180]](_0x21c8x36);console[_0x3c1f[13]](moment()[_0x3c1f[73]](_0x3c1f[72]));setTimeout(function(){dataReadCVS[_0x3c1f[181]](_0x21c8x1e,_0x21c8x1f,_0x21c8x20,_0x21c8x21)},100)});_0x21c8x35[_0x3c1f[20]](_0x21c8x34)});app[_0x3c1f[182]](_0x3c1f[183],function(_0x21c8x34,_0x21c8x32){var _0x21c8x1f=_0x21c8x34[_0x3c1f[168]][_0x3c1f[167]];console[_0x3c1f[13]](_0x3c1f[169]+ _0x21c8x1f);var _0x21c8x21=_0x21c8x34[_0x3c1f[168]][_0x3c1f[94]];console[_0x3c1f[13]](_0x3c1f[184]+ _0x21c8x21);var _0x21c8x35= new formidable.IncomingForm();var _0x21c8x1e,_0x21c8x36;_0x21c8x35[_0x3c1f[172]]= true;_0x21c8x35[_0x3c1f[173]]= path[_0x3c1f[157]](__dirname,_0x3c1f[174]);_0x21c8x35[_0x3c1f[178]](_0x3c1f[175],function(_0x21c8x37,_0x21c8x38){fs[_0x3c1f[177]](_0x21c8x38[_0x3c1f[2]],path[_0x3c1f[157]](_0x21c8x35[_0x3c1f[173]],_0x21c8x38[_0x3c1f[176]]));_0x21c8x36= _0x21c8x38[_0x3c1f[176]];_0x21c8x1e= path[_0x3c1f[157]](_0x21c8x35[_0x3c1f[173]],_0x21c8x36)});_0x21c8x35[_0x3c1f[178]](_0x3c1f[48],function(_0x21c8x23){console[_0x3c1f[13]](_0x3c1f[179]+ _0x21c8x23)});_0x21c8x35[_0x3c1f[178]](_0x3c1f[180],function(){_0x21c8x32[_0x3c1f[180]](_0x21c8x36);console[_0x3c1f[13]](moment()[_0x3c1f[73]](_0x3c1f[72]));setTimeout(function(){dataReadCVS[_0x3c1f[185]](_0x21c8x1e,_0x21c8x1f,_0x21c8x21)},100)});_0x21c8x35[_0x3c1f[20]](_0x21c8x34)})},socket:[],InitSocket:function(){var _0x21c8x39=this;io[_0x3c1f[178]](_0x3c1f[186],function(_0x21c8x3a){console[_0x3c1f[13]](_0x3c1f[187]);console[_0x3c1f[13]](_0x21c8x3a[_0x3c1f[99]]);_0x21c8x3a[_0x3c1f[178]](_0x3c1f[123],function(_0x21c8x3b,_0x21c8x3c){console[_0x3c1f[13]](_0x21c8x3a[_0x3c1f[99]]);_0x21c8x3c(_0x21c8x3a[_0x3c1f[99]])});_0x21c8x3a[_0x3c1f[178]](_0x3c1f[188],function(_0x21c8x30){console[_0x3c1f[13]](_0x3c1f[188]);acceso[_0x3c1f[189]](_0x21c8x30)});_0x21c8x3a[_0x3c1f[178]](_0x3c1f[190],function(_0x21c8x30){console[_0x3c1f[13]](_0x3c1f[190]);console[_0x3c1f[13]](_0x21c8x30);acceso.CambioClave(_0x21c8x30)});_0x21c8x3a[_0x3c1f[178]](_0x3c1f[191],function(_0x21c8x30){console[_0x3c1f[13]](_0x3c1f[192]);_0x21c8x39.GetJson(_0x21c8x30)});_0x21c8x3a[_0x3c1f[178]](_0x3c1f[193],function(_0x21c8x30){console[_0x3c1f[13]](_0x3c1f[193]);acceso[_0x3c1f[194]](_0x21c8x30)});_0x21c8x3a[_0x3c1f[178]](_0x3c1f[195],function(_0x21c8x30){console[_0x3c1f[13]](_0x3c1f[195]);console[_0x3c1f[13]](_0x21c8x30);acceso[_0x3c1f[196]](_0x21c8x30)});_0x21c8x3a[_0x3c1f[178]](_0x3c1f[197],function(_0x21c8x30){console[_0x3c1f[13]](_0x3c1f[197]);console[_0x3c1f[13]](_0x21c8x30);acceso[_0x3c1f[197]](_0x21c8x30)});_0x21c8x3a[_0x3c1f[178]](_0x3c1f[198],function(_0x21c8x30){console[_0x3c1f[13]](_0x3c1f[198]);console[_0x3c1f[13]](_0x21c8x30);acceso[_0x3c1f[198]](_0x21c8x30)});_0x21c8x3a[_0x3c1f[178]](_0x3c1f[199],function(_0x21c8x30){_0x21c8x39[_0x3c1f[200]](_0x21c8x30)});_0x21c8x3a[_0x3c1f[178]](_0x3c1f[201],function(_0x21c8x30){_0x21c8x39[_0x3c1f[202]](_0x21c8x30)})})},setIndInv:function(_0x21c8x30){_this= this;var _0x21c8x31=Func.Decrypted(_0x21c8x30[_0x3c1f[84]]);console[_0x3c1f[13]](_0x21c8x31);pool[_0x3c1f[66]](_0x3c1f[46],[_0x21c8x31[_0x3c1f[99]]],function(_0x21c8x23,_0x21c8x2b){if(_0x21c8x23){return console[_0x3c1f[48]](_0x3c1f[47],_0x21c8x23)};var _0x21c8x2c=_0x3c1f[63]+ _0x3c1f[64]+ _0x21c8x31[_0x3c1f[99]]+ _0x3c1f[82];pool[_0x3c1f[66]](_0x21c8x2c,function(_0x21c8x23,_0x21c8x2d){});pool[_0x3c1f[66]](_0x3c1f[58],[_0x21c8x31[_0x3c1f[99]],_0x21c8x31[_0x3c1f[203]],_0x21c8x31[_0x3c1f[204]],_0x21c8x31[_0x3c1f[170]],_0x3c1f[139]],function(_0x21c8x23,_0x21c8x2b){if(_0x21c8x23){return console[_0x3c1f[48]](_0x3c1f[62],_0x21c8x23)};io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[67],_0x3c1f[68])})})},setIndDir:function(_0x21c8x30){_this= this;var _0x21c8x31=Func.Decrypted(_0x21c8x30[_0x3c1f[84]]);console[_0x3c1f[13]](_0x21c8x31);pool[_0x3c1f[66]](_0x3c1f[77],[_0x21c8x31[_0x3c1f[99]]],function(_0x21c8x23,_0x21c8x2b){if(_0x21c8x23){return console[_0x3c1f[48]](_0x3c1f[47],_0x21c8x23)};var _0x21c8x2c=_0x3c1f[63]+ _0x3c1f[81]+ _0x21c8x31[_0x3c1f[99]]+ _0x3c1f[82];pool[_0x3c1f[66]](_0x21c8x2c,function(_0x21c8x23,_0x21c8x2d){});pool[_0x3c1f[66]](_0x3c1f[80],[_0x21c8x31[_0x3c1f[99]],_0x21c8x31[_0x3c1f[205]],_0x3c1f[139]],function(_0x21c8x23,_0x21c8x2b){if(_0x21c8x23){return console[_0x3c1f[48]](_0x3c1f[62],_0x21c8x23)};io[_0x3c1f[57]](_0x21c8x30[_0x3c1f[94]])[_0x3c1f[56]](_0x3c1f[67],_0x3c1f[83])})})},Init:function(){this.InitData();this.InitSocket()}};GeoCode.Init()
+var ConfigModule = require('./Config.js');
+var express = require('express');
+var app = express();
+var path = require('path');
+var formidable = require('formidable');
+var fs = require('fs');
+var Converter = require("csvtojson").Converter;
+var moment = require('moment');
+var CryptoJS = require("crypto-js");
+var pg = require('pg');
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+var shpwrite = require('shp-write');
+var fs = require('fs');	
+
+
+
+var cxPG=ConfigModule.GetPG();
+var cxPort=ConfigModule.GetPort();
+
+http.listen(cxPort, function() {
+    console.log('Server listening on port '+cxPort);
+});
+
+var Config={
+	cxPG :cxPG,
+	claveAES:'1erf2a5f1e87g1',
+	options: {
+	    folder: 'shapes',
+	    types: {
+	        point: 'Geocodificacion',
+	        polygon: 'Geocodificacion',
+	        line: 'Geocodificacion'
+	    }
+	}
+};
+
+
+var Func={
+	Decrypted:function (message) {
+		var decrypted =JSON.parse(CryptoJS.AES.decrypt(message,Config.claveAES).toString(CryptoJS.enc.Utf8));
+		return decrypted; 
+	},
+	Ecrypted:function (json){
+		var ciphertext = CryptoJS.AES.encrypt(JSON.stringify(json), Config.claveAES);
+		return ciphertext.toString();
+	},
+	toBuffer:function(ab) {
+	    var buffer = new Buffer(ab.byteLength),
+	        view = new Uint8Array(ab);
+	    for (var i = 0; i < buffer.length; ++i) { buffer[i] = view[i]; }
+	    return buffer;
+	}
+};
+
+
+var pool = new pg.Pool(Config.cxPG);
+
+var dataReadCVS = {
+	tituloID: function(fila) {
+        var tx = undefined;
+        var titulos = Object.keys(fila);
+        for (var i = 0; i < titulos.length; i++) { console.log(titulos[i]);
+            var t = titulos[i].toString().toUpperCase().trim();
+            if (t == "IDENTIFICADOR") {
+                tx = titulos[i];
+                break;
+            }
+            if (t == "IDENT") {
+                tx = titulos[i];
+                break;
+            }
+            if (t == "ID") {
+                tx = titulos[i];
+                break;
+            }
+        }
+        if (tx == undefined) { //console.log("Revisa valores");
+            for (var i = 0; i < titulos.length; i++) {
+                var t = fila[titulos[i]].toString().toUpperCase().trim();
+               	if (t == "IDENTIFICADOR") {
+	                tx = titulos[i];
+	                break;
+	            }
+	            if (t == "IDENT") {
+	                tx = titulos[i];
+	                break;
+	            }
+	            if (t == "ID") {
+	                tx = titulos[i];
+	                break;
+	            }
+            }
+        }
+        return tx;
+     },
+	tituloDIR: function(fila) {
+        var tx = undefined;
+        var titulos = Object.keys(fila);
+        for (var i = 0; i < titulos.length; i++) { //console.log(titulos[i]);
+            var t = titulos[i].toString().toUpperCase().trim();
+            if (t == "DIRECCION") {
+                tx = titulos[i];
+                break;
+            }
+            if (t == "DIRECC") {
+                tx = titulos[i];
+                break;
+            }
+            if (t == "DIREC") {
+                tx = titulos[i];
+                break;
+            }
+            if (t == "DRCN") {
+                tx = titulos[i];
+                break;
+            }
+            if (t == "DIR") {
+                tx = titulos[i];
+                break;
+            }
+        }
+        if (tx == undefined) { //console.log("Revisa valores");
+            for (var i = 0; i < titulos.length; i++) {
+                var t = fila[titulos[i]].toString().toUpperCase().trim();
+               	if (t == "DIRECCION") {
+	                tx = titulos[i];
+	                break;
+	            }
+	            if (t == "DIRECC") {
+	                tx = titulos[i];
+	                break;
+	            }
+	            if (t == "DIREC") {
+	                tx = titulos[i];
+	                break;
+	            }
+	            if (t == "DRCN") {
+	                tx = titulos[i];
+	                break;
+	            }
+	            if (t == "DIR") {
+	                tx = titulos[i];
+	                break;
+	            }
+            }
+        }
+        return tx;
+    },
+    tituloX: function(fila) {
+        var tx = undefined;
+        var titulos = Object.keys(fila);
+        for (var i = 0; i < titulos.length; i++) { //console.log(titulos[i]);
+            var t = titulos[i].toString().toUpperCase().trim();
+            if (t == "X") {
+                tx = titulos[i];
+                break;
+            }
+            if (t == "CX") {
+                tx = titulos[i];
+                break;
+            }
+            if (t == "LON") {
+                tx = titulos[i];
+                break;
+            }
+            if (t == "LONG") {
+                tx = titulos[i];
+                break;
+            }
+            if (t == "LONGITUD") {
+                tx = titulos[i];
+                break;
+            }
+        }
+        if (tx == undefined) { //console.log("Revisa valores");
+            for (var i = 0; i < titulos.length; i++) {
+                var t = fila[titulos[i]].toString().toUpperCase().trim();
+                if (t == "X") {
+                    tx = titulos[i];
+                    break;
+                }
+                if (t == "CX") {
+                    tx = titulos[i];
+                    break;
+                }
+                if (t == "LON") {
+                    tx = titulos[i];
+                    break;
+                }
+                if (t == "LONG") {
+                    tx = titulos[i];
+                    break;
+                }
+                if (t == "LONGITUD") {
+                    tx = titulos[i];
+                    break;
+                }
+            }
+        }
+        return tx;
+    },
+    tituloY: function(fila) {
+        var ty = undefined;
+        var titulos = Object.keys(fila);
+        for (var i = 0; i < titulos.length; i++) {
+            var v = titulos[i].toString().toUpperCase().trim();
+            if (v == "Y") {
+                ty = titulos[i];
+                break;
+            }
+            if (v == "CY") {
+                ty = titulos[i];
+                break;
+            }
+            if (v == "LAT") {
+                ty = titulos[i];
+                break;
+            }
+            if (v == "LATITUD") {
+                ty = titulos[i];
+                break;
+            }
+        }
+        if (ty == undefined) {
+            for (var i = 0; i < titulos.length; i++) {
+                var v = fila[titulos[i]].toString().toUpperCase().trim();
+                if (v == "Y") {
+                    ty = titulos[i];
+                    break;
+                }
+                if (v == "CY") {
+                    ty = titulos[i];
+                    break;
+                }
+                if (v == "LAT") {
+                    ty = titulos[i];
+                    break;
+                }
+                if (v == "LATITUD") {
+                    ty = titulos[i];
+                    break;
+                }
+            }
+        }
+        return ty;
+    },
+    leerArchivo: function(rutaArchivo, id_usr, srid,idSkt) {
+        console.log(rutaArchivo);
+        var converter = new Converter({
+            constructResult: true,
+            delimiter: ';',
+            ignoreEmpty: true,
+            checkColumn: true,
+            noheader: false
+        });
+        converter.fromFile(rutaArchivo, function(err, jsonArray) {
+            var contador = 0,contadorCol = 0; //console.log(jsonArray);
+            if (jsonArray != undefined) {
+                if (jsonArray.length > 0) {
+                    var BreakException = {};
+                    var headerX, headerY,headerID;
+                    //ELIMINA GeoCode ANTERIOR DEL USUARIO
+                    pool.query("DELETE FROM  t_geocode_tmp_inv WHERE id_usr = $1;", [id_usr],
+                        function(err, result) {
+                         if (err) return console.error('Error Eliminando datos cordenada', err);
+						   	try {
+						   		jsonArray.forEach(function(fila) {
+		                            if (contadorCol == 0) { //console.log(fila);
+		                                headerX = dataReadCVS.tituloX(fila); console.log("ColumnaX: "+headerX);
+		                                headerY = dataReadCVS.tituloY(fila); console.log("ColumnaY: "+headerY);
+		                                headerID = dataReadCVS.tituloID(fila); console.log("ColumnaY: "+headerID);
+		                            } 
+									if (headerX == undefined || headerY == undefined|| headerID == undefined){
+										 io.to(idSkt).emit('erroresCarga', 'columnXY');
+										 throw BreakException;		
+										 									
+									}else{
+										contadorCol++;
+			                            if (fila[headerX] != null && fila[headerY] != null) { //console.log("inserta");
+			                                pool.query("INSERT INTO t_geocode_tmp_inv(id_usr, x, y,srid,id) VALUES ($1, $2, $3, $4, $5);", [id_usr, fila[headerX].toString().replace(",", "."), fila[headerY].toString().replace(",", "."), srid, fila[headerID]],
+			                                    function(err, result) {
+			                                        if (err) return console.error('Error insertando cordenada', err);
+			                                        contador++;
+			                                           
+			                                        if(contador==jsonArray.length){
+			                                        	var sql='INSERT INTO public.t_geocode_auditoria( tipo, fecha,id_usuario)'+
+												   		"VALUES ('Inverso',now(), '"+id_usr+"')";
+												   		pool.query(sql,function(err, resultInsert) {});
+						                        		
+			                                        	io.to(idSkt).emit('terminaCarga', 'Inverso');
+			                                        }                                    
+			                                    }); //console.log(fila);
+			                            }		
+									}
+
+		                            		                        });
+		                    } catch (e) {
+		                        console.log(e);
+		                        console.log("Archivo No Valido");
+		                        if (e !== BreakException) throw e;
+		                    }                        
+                        
+                        }
+                    );
+
+                    console.log("Json Archivo: " + moment().format('h:mm:s:SSSS'));
+                    console.log("------------------------------------------------");
+                }
+            } else {
+                console.log("No se pudo leer el archivo");
+            }
+        });
+    },
+    leerArchivoDirecto: function(rutaArchivo, id_usr, idSkt) {
+        console.log(rutaArchivo);
+        var converter = new Converter({
+            constructResult: true,
+            delimiter: ';',
+            ignoreEmpty: true,
+            checkColumn: true,
+            noheader: false
+        });
+        converter.fromFile(rutaArchivo, function(err, jsonArray) {
+            var contador = 0,contadorCol = 0; //console.log(jsonArray);
+            if (jsonArray != undefined) {
+                if (jsonArray.length > 0) {
+                    var BreakException = {};
+                    var headerDIR,headerID;
+                    //ELIMINA GeoCode ANTERIOR DEL USUARIO
+                    pool.query("DELETE FROM  t_geocode_tmp_dir WHERE id_usr = $1;", [id_usr],
+                        function(err, result) {
+                        if (err) return console.error('Error Eliminando datos cordenada', err);
+                      	try {
+                      		
+	                        jsonArray.forEach(function(fila) {
+	                            if (contadorCol == 0) { //console.log(fila);
+	                                headerDIR = dataReadCVS.tituloDIR(fila); 
+	                                headerID = dataReadCVS.tituloID(fila); 
+	                            } 
+		                        contadorCol++;
+								if (headerDIR == undefined||headerID == undefined ){
+									 io.to(idSkt).emit('erroresCarga', 'columnDir');
+									 throw BreakException;		
+								}else{
+		                            if (fila[headerDIR] != null ) { //console.log("inserta");
+		                                pool.query("INSERT INTO t_geocode_tmp_dir(id_usr, dir,id) VALUES ($1, $2, $3);", [id_usr, fila[headerDIR].toString(), fila[headerID]],
+		                                    function(err, result) {
+		                                        if (err) return console.error('Error insertando cordenada', err);
+		                                        contador++;   
+		                                        if(contador==jsonArray.length){
+		                                        	var sql='INSERT INTO public.t_geocode_auditoria( tipo, fecha,id_usuario)'+
+												   		"VALUES ('Directo',now(), '"+id_usr+"');";
+												   		pool.query(sql,function(err, resultInsert) {});
+							                    		
+		                                        	io.to(idSkt).emit('terminaCarga', 'Directo');
+		                                        }                                    
+		                                    }); //console.log(fila);
+		                            }
+		                         }	
+	                        });
+	                    } catch (e) {
+	                        console.log(e);
+	                        console.log("Archivo No Valido");
+	                        if (e !== BreakException) throw e;
+	                    }
+                      }
+                    );
+                    console.log("Json Archivo: " + moment().format('h:mm:s:SSSS'));
+                    console.log("------------------------------------------------");
+                }
+            } else {
+                console.log("No se pudo leer el archivo");
+            }
+        });
+    }
+    
+};
+var acceso={
+	login:function(data){
+		var dt=Func.Decrypted(data.aes);
+		console.log(dt);
+		var sql=' select id,nombre,perfil from public.t_usuario '+
+			" where upper(usuario)=upper('"+dt.usr+"') and clave='"+dt.pas+"' and activo=1;";
+		console.log(sql);	
+		pool.query(sql,
+            function(err, result) {
+                if (err) {
+                    return console.error('error running query', err);
+                }               
+                console.log(result.rows[0]);
+                if(result.rows[0]){
+		            var json=Func.Ecrypted(result.rows[0]);
+		            
+		            io.to(data.idSkt).emit('SetLoginUsuario', json);
+                }else{
+                	io.to(data.idSkt).emit('SetLoginUsuario', '');
+                }
+        });
+	},
+	CambioClave:function(data){
+		var dt=Func.Decrypted(data.aes);
+		console.log(dt);
+		var sql='select id '+
+		'from public.t_usuario '+
+		"where id="+dt.id+" and clave='"+dt.pass+"' and activo=1 ";
+		pool.query(sql,function(err, result) {
+                if (err) {
+                    return console.error('error running query', err);
+                }               
+                if(result.rows[0]){
+                	var sql='update public.t_usuario '+
+					" set clave='"+dt.pasnew+"' "+
+					' where  id='+dt.id;
+					console.log(sql);
+					pool.query(sql,function(err, result) {
+				    		var json=Func.Ecrypted({cambio:'ok'});    
+		            		io.to(data.idSkt).emit('SetCambioUsuario', json);    	
+				     });				    
+                }else{
+                	var json=Func.Ecrypted({cambio:'0'});
+                	io.to(data.idSkt).emit('SetCambioUsuario', json);
+                }
+       });
+	},
+	getUsuarios:function(data){		//var dt=Func.Decrypted(data.aes);console.log(dt);
+		var sql= "SELECT array_to_json(array_agg(d)) as datos FROM ( "+ 
+					"SELECT COALESCE(row_to_json(t), '[]') as datos FROM "+
+					"( " +
+						"select u.id,u.nombre,usuario,u.clave,p.perfil,u.perfil id_perfil,activo id_activo,CASE WHEN (activo = 1) THEN 'Si' ELSE 'No' END AS activo "+
+						"from t_usuario u inner join p_perfil p on u.perfil = p.id where u.perfil<>3 order by usuario"+
+					")t"+
+				")d";	//console.log(sql);
+		pool.query(sql,
+         function(err, res) {
+                if (err) {
+                    return console.error('error running query', err);
+                }               
+                io.to(data.idSkt).emit('Usrs', res.rows[0].datos);
+        });
+	},
+	addUsuario:function(data){
+		var dt=Func.Decrypted(data.aes);
+		console.log(dt);
+		var sql="INSERT INTO public.t_usuario (nombre,usuario,clave,activo,perfil) VALUES ('"+
+		dt.nombre+"','"+dt.usuario+"','"+dt.clave+"','1','"+dt.perfil+"')";
+		console.log(sql);	
+		pool.query(sql,
+         function(err, result) {
+                if (err) {
+					var json=Func.Ecrypted({resp:err});    
+					io.to(data.idSkt).emit('setUsuarioResp', json);
+                    return console.error('error running query', err);
+                }               
+				var json=Func.Ecrypted({resp:'ok'});    
+				io.to(data.idSkt).emit('setUsuarioResp', json);
+        });
+	},
+	updUsuario:function(data){
+		var dt=Func.Decrypted(data.aes);
+		console.log(dt);
+		var sql="UPDATE public.t_usuario SET nombre='"+dt.nombre+"',usuario='"+dt.usuario+"',clave='"+dt.clave+"',activo='"+dt.activo+"',perfil='"+dt.perfil+"' WHERE id ='"+dt.id+"'";
+		console.log(sql);	
+		pool.query(sql,
+         function(err, result) {
+                if (err) {
+					var json=Func.Ecrypted({resp:err});    
+					io.to(data.idSkt).emit('updUsuarioResp', json);
+                    return console.error('error running query', err);
+                }               
+				var json=Func.Ecrypted({resp:'ok'});    
+				io.to(data.idSkt).emit('updUsuarioResp', json);
+        });
+	},
+	delUsuario:function(data){
+		var dt=Func.Decrypted(data.aes);
+		console.log(dt);
+		var sql="select activo from public.t_usuario WHERE id ='"+dt.id+"'";
+		console.log(sql);	
+		pool.query(sql,
+        function(err, result) {
+                if (err) {
+					var json=Func.Ecrypted({resp:err});    
+					io.to(data.idSkt).emit('delUsuarioResp', json);
+                    return console.error('error running query', err);
+                }          
+                var sql='';     
+                if(result.rows[0].activo=='1'){
+                	sql="UPDATE public.t_usuario SET activo=0 WHERE id ='"+dt.id+"'";
+                }else{
+                	sql="UPDATE public.t_usuario SET activo=1 WHERE id ='"+dt.id+"'";
+                }
+				pool.query(sql,function(err, result) {
+		                if (err) {
+							var json=Func.Ecrypted({resp:err});    
+							io.to(data.idSkt).emit('delUsuarioResp', json);
+		                    return console.error('error running query', err);
+		                }               
+						var json=Func.Ecrypted({resp:'ok'});    
+						io.to(data.idSkt).emit('delUsuarioResp', json);
+		        });
+				var json=Func.Ecrypted({resp:'ok'});    
+				io.to(data.idSkt).emit('delUsuarioResp', json);
+        });
+		
+ 	}
+};
+var GeoCode={
+	GetJson:function(data){
+		_this=this;
+		var dt=Func.Decrypted(data.aes);
+		var sql="select tipo "+
+		" from public.t_geocode_auditoria "+
+		" where fecha=(select max(fecha) from public.t_geocode_auditoria where  id_usuario="+dt.id+");";
+		console.log(sql);
+		pool.query(sql,function(err, result) {
+                if (err) {
+                    return console.error('error running query', err);
+                }
+                
+             if(result.rows[0]){
+             	if(result.rows[0].tipo=="Inverso"){
+             		_this.GetJsonInverso(data);
+             	}else if(result.rows[0].tipo=="Directo"){
+             		_this.GetJsonDirecto(data);
+             	}             		
+             }else{
+             	io.to(data.idSkt).emit('SetSinDatos', 'no data');
+             }
+               
+      });
+	},
+	GetJsonDirecto:function(data){
+		var dt=Func.Decrypted(data.aes);
+		var sql="select func.get_geo_directa('"+dt.id+"');";
+		console.log(sql);
+		pool.query(sql,function(err, result) {
+                if (err) {
+                    return console.error('error running query', err);
+                } 
+        		   console.log("devuelve datos");                 
+                if(result.rows[0]){
+                	var zip=shpwrite.zip(result.rows[0].get_geo_directa, Config.options);
+                	fs.writeFileSync('./public/shp/'+dt.id+'shape.zip', Func.toBuffer(zip));
+                	
+                	var json=Func.Ecrypted(result.rows[0]);
+                	io.to(data.idSkt).emit('SetJsonDirecto', json);
+                }else{
+                	var json=Func.Ecrypted({cambio:'0'});
+                	io.to(data.idSkt).emit('SetJsonDirecto', json);
+                }
+        });
+	},
+	GetJsonInverso:function(data){
+		var dt=Func.Decrypted(data.aes);
+		var sql="select func.get_geo_inversa('"+dt.id+"');";
+		console.log(sql);
+		pool.query(sql,function(err, result) {
+                if (err) {
+                    return console.error('error running query', err);
+                } 
+        		   console.log("devuelve datos");                 
+                if(result.rows[0]){
+                	
+                	var zip=shpwrite.zip(result.rows[0].get_geo_inversa, Config.options);
+                	fs.writeFileSync('./public/shp/'+dt.id+'shape.zip', Func.toBuffer(zip));
+                	
+                	var json=Func.Ecrypted(result.rows[0]);
+                	console.log("devuelve datos Inveso");
+                	io.to(data.idSkt).emit('SetJsonInverso', json);
+                }else{
+                	var json=Func.Ecrypted({cambio:'0'});
+                	io.to(data.idSkt).emit('SetJsonInverso', json);
+                }
+        });
+	},
+	InitData:function(){
+		app.use(express.static(path.join(__dirname, 'public')));
+
+		app.get('/', function(req, res) {
+		    res.sendFile(path.join(__dirname, 'views/index.html'));
+		});
+		app.get('/geo', function(req, res) {
+		    res.sendFile(path.join(__dirname, 'views/geo.html'));
+		});
+		
+		app.post('/uploadInverso/:id_usr/:srid/:idSkt', function(req, res) {
+				var id_usr = req.params.id_usr;
+			    console.log("Usuario: " + id_usr);
+			    var srid = req.params.srid;
+			    console.log("SRID: " + srid);
+			    var idSkt = req.params.idSkt;
+			    console.log("SRID: " + idSkt);
+			
+			    // create an incoming form object 
+			    var form = new formidable.IncomingForm();
+			    var rutaArchivo, nombreArchivo;
+			
+			    // specify that we want to allow the user to upload multiple files in a single request
+			    form.multiples = true;
+			
+			    // store all uploads in the /uploads directory
+			    form.uploadDir = path.join(__dirname, '/uploads');
+			
+			    // every time a file has been uploaded successfully,
+			    // rename it to it's orignal name
+			    form.on('file', function(field, file) {
+			        fs.rename(file.path, path.join(form.uploadDir, file.name));
+			        nombreArchivo = file.name;
+			        rutaArchivo = path.join(form.uploadDir, nombreArchivo);
+			    });
+			
+			    // log any errors that occur
+			    form.on('error', function(err) {
+			        console.log('An error has occured: \n' + err);
+			    });
+			
+			    // once all the files have been uploaded, send a response to the client
+			    form.on('end', function() {
+			        res.end(nombreArchivo);
+			        console.log(moment().format('h:mm:s:SSSS'));
+			        setTimeout(function() {
+			            dataReadCVS.leerArchivo(rutaArchivo, id_usr, srid,idSkt);
+			        }, 100);
+			    });
+			
+			    // parse the incoming request containing the form dataReadCVS
+			    form.parse(req); //console.log(form.parse(req));
+			
+		});
+		app.post('/uploadDirecto/:id_usr/:idSkt', function(req, res) {
+				var id_usr = req.params.id_usr;
+			    console.log("Usuario: " + id_usr);
+			    var idSkt = req.params.idSkt;
+			    console.log("idSkt: " + idSkt);
+			
+			    // create an incoming form object 
+			    var form = new formidable.IncomingForm();
+			    var rutaArchivo, nombreArchivo;
+			
+			    // specify that we want to allow the user to upload multiple files in a single request
+			    form.multiples = true;
+			
+			    // store all uploads in the /uploads directory
+			    form.uploadDir = path.join(__dirname, '/uploads');
+			
+			    // every time a file has been uploaded successfully,
+			    // rename it to it's orignal name
+			    form.on('file', function(field, file) {
+			        fs.rename(file.path, path.join(form.uploadDir, file.name));
+			        nombreArchivo = file.name;
+			        rutaArchivo = path.join(form.uploadDir, nombreArchivo);
+			    });
+			
+			    // log any errors that occur
+			    form.on('error', function(err) {
+			        console.log('An error has occured: \n' + err);
+			    });
+			
+			    // once all the files have been uploaded, send a response to the client
+			    form.on('end', function() {
+			        res.end(nombreArchivo);
+			        console.log(moment().format('h:mm:s:SSSS'));
+			        setTimeout(function() {
+			            dataReadCVS.leerArchivoDirecto(rutaArchivo, id_usr, idSkt);
+			        }, 100);
+			    });
+			
+			    // parse the incoming request containing the form dataReadCVS
+			    form.parse(req); //console.log(form.parse(req));
+			
+		});
+
+	},
+	socket:[],
+	InitSocket:function (){
+		var _this=this;
+		io.on('connection', function (sckt) {
+		  console.log('conecta id');
+		  console.log(sckt.id);
+		  sckt.on('usuario', function (usr, fn) {
+		    console.log(sckt.id);
+		    fn(sckt.id);
+		  });
+		  sckt.on('LoginUsuario', function (data) {
+		  	 console.log('LoginUsuario');
+		     acceso.login(data);
+		   });
+		   
+		   sckt.on('CambioPass', function (data) {
+		  	 console.log('CambioPass');
+		  	 console.log(data);
+		     acceso.CambioClave(data);
+		   });
+		   sckt.on('GetJson', function (data) {
+		   	 console.log("Ingresa a GetJson");
+		  	 _this.GetJson(data);
+		   });
+		     sckt.on('listaUsuario', function (data) {
+		  	 console.log('listaUsuario');	//console.log(data);
+		     acceso.getUsuarios(data);
+		   });
+		   
+		   sckt.on('setUsuario', function (data) {
+		  	 console.log('setUsuario');	console.log(data);
+		     acceso.addUsuario(data);
+		   });
+		   
+		   sckt.on('updUsuario', function (data) {
+		  	 console.log('updUsuario');	console.log(data);
+		     acceso.updUsuario(data);
+		   });
+		   
+		   sckt.on('delUsuario', function (data) {
+		  	 console.log('delUsuario');	console.log(data);
+		     acceso.delUsuario(data);
+		   });
+		   sckt.on('IndividualInv', function (data) {
+		  	 _this.setIndInv(data);
+		   });
+		   sckt.on('IndividualDir', function (data) {
+		  	 _this.setIndDir(data);
+		   });
+	});
+	},
+	setIndInv:function(data){
+		_this=this;
+		
+		var dt=Func.Decrypted(data.aes);
+		console.log(dt);
+	    pool.query("DELETE FROM  t_geocode_tmp_inv WHERE id_usr = $1;", [dt.id],
+	      function(err, result) {
+        	if (err) return console.error('Error Eliminando datos cordenada', err);
+	      		var sql='INSERT INTO public.t_geocode_auditoria( tipo, fecha,id_usuario)'+
+		   		"VALUES ('Inverso',now(), '"+dt.id+"');";
+		   		pool.query(sql,function(err, resultInsert) {});
+	    		pool.query("INSERT INTO t_geocode_tmp_inv(id_usr, x, y,srid,id) VALUES ($1, $2, $3, $4, $5);", 
+	    		[dt.id, dt.x, dt.y, dt.srid,'1'],
+	            function(err, result) {
+	                if (err) return console.error('Error insertando cordenada', err);
+	                	io.to(data.idSkt).emit('terminaCarga', 'Inverso');
+	            });
+         });    
+	},
+	setIndDir:function(data){
+		_this=this;
+		var dt=Func.Decrypted(data.aes);
+		console.log(dt);
+	    pool.query("DELETE FROM  t_geocode_tmp_dir WHERE id_usr = $1;", [dt.id],
+	      function(err, result) {
+        	if (err) return console.error('Error Eliminando datos cordenada', err);
+	      		var sql='INSERT INTO public.t_geocode_auditoria( tipo, fecha,id_usuario)'+
+		   		"VALUES ('Directo',now(), '"+dt.id+"');";
+		   		pool.query(sql,function(err, resultInsert) {});
+		   		pool.query("INSERT INTO t_geocode_tmp_dir(id_usr, dir,id) VALUES ($1, $2, $3);"
+		   		, [dt.id, dt.dir,'1'],	                                
+	            function(err, result) {
+	                if (err) return console.error('Error insertando cordenada', err);
+	                	io.to(data.idSkt).emit('terminaCarga', 'Directo');
+	            });
+         });    
+	},
+	Init:function(){
+		this.InitData();
+		this.InitSocket();	
+	}	
+};
+
+GeoCode.Init();
+
