@@ -5,7 +5,13 @@
  	InitSocket:function (){
  		_this=this;
 		socket.on('connect', function () {
-		  socket.emit('usuario',{id:'usuario'}, function (data) {
+		  var dt='';
+		  if(sessionStorage.dt){
+		  	dt=Func.DataLogin();	
+		  }
+		  
+		  
+		  socket.emit('usuario',dt, function (data) {
 		     _this.idSkt=data;
 			if(window.location.pathname!="/"){ 
 		    	//console.log("Peticion Inicio Mapa");
@@ -16,6 +22,9 @@
 		    }
 		     //console.log(GeoCode.idSkt);
 		   });
+		   socket.on('Cerrar', function (data) {
+		   		Func.CerrarAPP();
+		   });
 		   socket.on('terminaCarga', function (data) {
 		   		//console.log(data);
 		   		if(data=="Directo"||data=="Inverso"){
@@ -25,12 +34,17 @@
 		   		}
 		   });
 		   socket.on('erroresCarga', function (data) {
+		   		$("#loading-mask").hide();
 		   		if(data=="columnXY"){
-					$("#loading-mask").hide();	
 					Func.msjAlerta("No existen las columnas X,Y o ID");	
 		   		}else if(data=="columnDir"){
-					$("#loading-mask").hide();	
 					Func.msjAlerta("No existe la columna direccion o ID");
+		   		}
+		   		else if(data=="NumRegistros"){
+					Func.msjAlerta("El numero debe ser menor a 7.000");
+		   		}
+		   		else if(data=="Invalidas"){
+					Func.msjAlerta("Hay coordenadas NO numericas");
 		   		}
 		   });
 		   socket.on('SetJsonInverso', function (data) {

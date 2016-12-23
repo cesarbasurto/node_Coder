@@ -50,6 +50,9 @@ var Func={
 	        view = new Uint8Array(ab);
 	    for (var i = 0; i < buffer.length; ++i) { buffer[i] = view[i]; }
 	    return buffer;
+	},
+	isNumeric:function (n) {
+	  return !isNaN(parseFloat(n)) && isFinite(n);
 	}
 };
 
@@ -60,7 +63,7 @@ var dataReadCVS = {
 	tituloID: function(fila) {
         var tx = undefined;
         var titulos = Object.keys(fila);
-        for (var i = 0; i < titulos.length; i++) { console.log(titulos[i]);
+        for (var i = 0; i < titulos.length; i++) { //console.log(titulos[i]);
             var t = titulos[i].toString().toUpperCase().trim();
             if (t == "IDENTIFICADOR") {
                 tx = titulos[i];
@@ -246,7 +249,7 @@ var dataReadCVS = {
         return ty;
     },
     leerArchivo: function(rutaArchivo, id_usr, srid,idSkt) {
-        console.log(rutaArchivo);
+        //console.log(rutaArchivo);
         var converter = new Converter({
             constructResult: true,
             delimiter: ';',
@@ -259,53 +262,68 @@ var dataReadCVS = {
             if (jsonArray != undefined) {
                 if (jsonArray.length > 0) {
                     var BreakException = {};
-                    var headerX, headerY,headerID;
-                    //ELIMINA GeoCode ANTERIOR DEL USUARIO
-                    pool.query("DELETE FROM  t_geocode_tmp_inv WHERE id_usr = $1;", [id_usr],
-                        function(err, result) {
-                         if (err) return console.error('Error Eliminando datos cordenada', err);
-						   	try {
-						   		jsonArray.forEach(function(fila) {
-		                            if (contadorCol == 0) { //console.log(fila);
-		                                headerX = dataReadCVS.tituloX(fila); console.log("ColumnaX: "+headerX);
-		                                headerY = dataReadCVS.tituloY(fila); console.log("ColumnaY: "+headerY);
-		                                headerID = dataReadCVS.tituloID(fila); console.log("ColumnaY: "+headerID);
-		                            } 
-									if (headerX == undefined || headerY == undefined|| headerID == undefined){
-										 io.to(idSkt).emit('erroresCarga', 'columnXY');
-										 throw BreakException;		
-										 									
-									}else{
-										contadorCol++;
-			                            if (fila[headerX] != null && fila[headerY] != null) { //console.log("inserta");
-			                                pool.query("INSERT INTO t_geocode_tmp_inv(id_usr, x, y,srid,id) VALUES ($1, $2, $3, $4, $5);", [id_usr, fila[headerX].toString().replace(",", "."), fila[headerY].toString().replace(",", "."), srid, fila[headerID]],
-			                                    function(err, result) {
-			                                        if (err) return console.error('Error insertando cordenada', err);
-			                                        contador++;
-			                                           
-			                                        if(contador==jsonArray.length){
-			                                        	var sql='INSERT INTO public.t_geocode_auditoria( tipo, fecha,id_usuario)'+
-												   		"VALUES ('Inverso',now(), '"+id_usr+"')";
-												   		pool.query(sql,function(err, resultInsert) {});
-						                        		
-			                                        	io.to(idSkt).emit('terminaCarga', 'Inverso');
-			                                        }                                    
-			                                    }); //console.log(fila);
-			                            }		
-									}
-
-		                            		                        });
-		                    } catch (e) {
-		                        console.log(e);
-		                        console.log("Archivo No Valido");
-		                        if (e !== BreakException) throw e;
-		                    }                        
-                        
-                        }
-                    );
-
-                    console.log("Json Archivo: " + moment().format('h:mm:s:SSSS'));
-                    console.log("------------------------------------------------");
+                	if (jsonArray.length > 7000){
+                		io.to(idSkt).emit('erroresCarga', 'NumRegistros');
+						throw BreakException;
+                	}else{
+		                var headerX, headerY,headerID;
+		                //ELIMINA GeoCode ANTERIOR DEL USUARIO
+		                pool.query("DELETE FROM  t_geocode_tmp_inv WHERE id_usr = $1;", [id_usr],
+		                    function(err, result) {
+		                     if (err) return console.error('Error Eliminando datos cordenada', err);
+							   	try {
+							   		jsonArray.forEach(function(fila) {
+			                            if (contadorCol == 0) { //console.log(fila);
+			                                headerX = dataReadCVS.tituloX(fila); //console.log("ColumnaX: "+headerX);
+			                                headerY = dataReadCVS.tituloY(fila); //console.log("ColumnaY: "+headerY);
+			                                headerID = dataReadCVS.tituloID(fila); //console.log("ColumnaY: "+headerID);
+			                            } 
+										if (headerX == undefined || headerY == undefined|| headerID == undefined){
+											 io.to(idSkt).emit('erroresCarga', 'columnXY');
+											 throw BreakException;		
+											 									
+										}else{
+											contadorCol++;
+				                            if (fila[headerX] != null && fila[headerY] != null) { //console.log("inserta");
+				                            	if(Func.isNumeric(fila[headerX].toString().replace(",", "."))&&Func.isNumeric(fila[headerY].toString().replace(",", "."))){
+				                                	pool.query("INSERT INTO t_geocode_tmp_inv(id_usr, x, y,srid,id) VALUES ($1, $2, $3, $4, $5);", [id_usr, fila[headerX].toString().replace(",", "."), fila[headerY].toString().replace(",", "."), srid, fila[headerID]],
+				                                    function(err, result) {
+				                                        if (err) return console.error('Error insertando cordenada', err);
+				                                        contador++;
+				                                           
+				                                        if(contador==jsonArray.length){
+				                                        	var sql='INSERT INTO public.t_geocode_auditoria( tipo, fecha,id_usuario)'+
+													   		"VALUES ('Inverso',now(), '"+id_usr+"')";
+													   		pool.query(sql,function(err, resultInsert) {});
+							                        		
+				                                        	io.to(idSkt).emit('terminaCarga', 'Inverso');
+				                                        }                                    
+				                                    }); //console.log(fila);
+				                            	}else{
+				                            		pool.query("DELETE FROM  t_geocode_tmp_inv WHERE id_usr = $1;", [id_usr],
+		                   								function(err, result) {
+		                     								if (err) return console.error('Error Eliminando datos cordenada', err);
+		                     						});
+		                     							
+				                            		io.to(idSkt).emit('erroresCarga', 'Invalidas');
+				                            		throw BreakException;			
+				                            	}
+				                            }		
+										}
+		
+			                            		                        });
+			                    } catch (e) {
+			                        console.log(e);
+			                        console.log("Archivo No Valido");
+			                        if (e !== BreakException) throw e;
+			                    }                        
+		                    
+		                    }
+		                );
+		
+		                console.log("Json Archivo: " + moment().format('h:mm:s:SSSS'));
+		                console.log("------------------------------------------------");
+                    }
                 }
             } else {
                 console.log("No se pudo leer el archivo");
@@ -325,49 +343,56 @@ var dataReadCVS = {
             var contador = 0,contadorCol = 0; //console.log(jsonArray);
             if (jsonArray != undefined) {
                 if (jsonArray.length > 0) {
-                    var BreakException = {};
-                    var headerDIR,headerID;
-                    //ELIMINA GeoCode ANTERIOR DEL USUARIO
-                    pool.query("DELETE FROM  t_geocode_tmp_dir WHERE id_usr = $1;", [id_usr],
-                        function(err, result) {
-                        if (err) return console.error('Error Eliminando datos cordenada', err);
-                      	try {
-                      		
-	                        jsonArray.forEach(function(fila) {
-	                            if (contadorCol == 0) { //console.log(fila);
-	                                headerDIR = dataReadCVS.tituloDIR(fila); 
-	                                headerID = dataReadCVS.tituloID(fila); 
-	                            } 
-		                        contadorCol++;
-								if (headerDIR == undefined||headerID == undefined ){
-									 io.to(idSkt).emit('erroresCarga', 'columnDir');
-									 throw BreakException;		
-								}else{
-		                            if (fila[headerDIR] != null ) { //console.log("inserta");
-		                                pool.query("INSERT INTO t_geocode_tmp_dir(id_usr, dir,id) VALUES ($1, $2, $3);", [id_usr, fila[headerDIR].toString(), fila[headerID]],
-		                                    function(err, result) {
-		                                        if (err) return console.error('Error insertando cordenada', err);
-		                                        contador++;   
-		                                        if(contador==jsonArray.length){
-		                                        	var sql='INSERT INTO public.t_geocode_auditoria( tipo, fecha,id_usuario)'+
-												   		"VALUES ('Directo',now(), '"+id_usr+"');";
-												   		pool.query(sql,function(err, resultInsert) {});
-							                    		
-		                                        	io.to(idSkt).emit('terminaCarga', 'Directo');
-		                                        }                                    
-		                                    }); //console.log(fila);
-		                            }
-		                         }	
-	                        });
-	                    } catch (e) {
-	                        console.log(e);
-	                        console.log("Archivo No Valido");
-	                        if (e !== BreakException) throw e;
-	                    }
-                      }
-                    );
-                    console.log("Json Archivo: " + moment().format('h:mm:s:SSSS'));
-                    console.log("------------------------------------------------");
+                	var BreakException = {};
+                	if (jsonArray.length > 7000){
+                		io.to(idSkt).emit('erroresCarga', 'NumRegistros');
+						throw BreakException;
+                	}else{
+                		
+	                    var headerDIR,headerID;
+	                    //ELIMINA GeoCode ANTERIOR DEL USUARIO
+	                    pool.query("DELETE FROM  t_geocode_tmp_dir WHERE id_usr = $1;", [id_usr],
+	                        function(err, result) {
+	                        if (err) return console.error('Error Eliminando datos cordenada', err);
+	                      	try {
+	                      		
+		                        jsonArray.forEach(function(fila) {
+		                            if (contadorCol == 0) { //console.log(fila);
+		                                headerDIR = dataReadCVS.tituloDIR(fila); 
+		                                headerID = dataReadCVS.tituloID(fila); 
+		                            } 
+			                        contadorCol++;
+									if (headerDIR == undefined||headerID == undefined ){
+										 io.to(idSkt).emit('erroresCarga', 'columnDir');
+										 throw BreakException;		
+									}else{
+			                            if (fila[headerDIR] != null ) { //console.log("inserta");
+			                                pool.query("INSERT INTO t_geocode_tmp_dir(id_usr, dir,id) VALUES ($1, $2, $3);", [id_usr, fila[headerDIR].toString(), fila[headerID]],
+			                                    function(err, result) {
+			                                        if (err) return console.error('Error insertando cordenada', err);
+			                                        contador++;   
+			                                        if(contador==jsonArray.length){
+			                                        	var sql='INSERT INTO public.t_geocode_auditoria( tipo, fecha,id_usuario)'+
+													   		"VALUES ('Directo',now(), '"+id_usr+"');";
+													   		pool.query(sql,function(err, resultInsert) {});
+								                    		
+			                                        	io.to(idSkt).emit('terminaCarga', 'Directo');
+			                                        }                                    
+			                                    }); //console.log(fila);
+			                            }
+			                         }	
+		                        });
+		                    } catch (e) {
+		                        console.log(e);
+		                        console.log("Archivo No Valido");
+		                        if (e !== BreakException) throw e;
+		                    }
+	                      }
+	                    );
+	                    console.log("Json Archivo: " + moment().format('h:mm:s:SSSS'));
+	                    console.log("------------------------------------------------");	
+                	}
+                    
                 }
             } else {
                 console.log("No se pudo leer el archivo");
@@ -379,19 +404,18 @@ var dataReadCVS = {
 var acceso={
 	login:function(data){
 		var dt=Func.Decrypted(data.aes);
-		console.log(dt);
+		//console.log(dt);
 		var sql=' select id,nombre,perfil from public.t_usuario '+
 			" where upper(usuario)=upper('"+dt.usr+"') and clave='"+dt.pas+"' and activo=1;";
-		console.log(sql);	
+		//console.log(sql);	
 		pool.query(sql,
             function(err, result) {
                 if (err) {
                     return console.error('error running query', err);
                 }               
-                console.log(result.rows[0]);
+                //console.log(result.rows[0]);
                 if(result.rows[0]){
 		            var json=Func.Ecrypted(result.rows[0]);
-		            
 		            io.to(data.idSkt).emit('SetLoginUsuario', json);
                 }else{
                 	io.to(data.idSkt).emit('SetLoginUsuario', '');
@@ -400,7 +424,7 @@ var acceso={
 	},
 	CambioClave:function(data){
 		var dt=Func.Decrypted(data.aes);
-		console.log(dt);
+		//console.log(dt);
 		var sql='select id '+
 		'from public.t_usuario '+
 		"where id="+dt.id+" and clave='"+dt.pass+"' and activo=1 ";
@@ -412,7 +436,7 @@ var acceso={
                 	var sql='update public.t_usuario '+
 					" set clave='"+dt.pasnew+"' "+
 					' where  id='+dt.id;
-					console.log(sql);
+					//console.log(sql);
 					pool.query(sql,function(err, result) {
 				    		var json=Func.Ecrypted({cambio:'ok'});    
 		            		io.to(data.idSkt).emit('SetCambioUsuario', json);    	
@@ -441,10 +465,10 @@ var acceso={
 	},
 	addUsuario:function(data){
 		var dt=Func.Decrypted(data.aes);
-		console.log(dt);
+		//console.log(dt);
 		var sql="INSERT INTO public.t_usuario (nombre,usuario,clave,activo,perfil) VALUES ('"+
 		dt.nombre+"','"+dt.usuario+"','"+dt.clave+"','1','"+dt.perfil+"')";
-		console.log(sql);	
+		//console.log(sql);	
 		pool.query(sql,
          function(err, result) {
                 if (err) {
@@ -458,9 +482,9 @@ var acceso={
 	},
 	updUsuario:function(data){
 		var dt=Func.Decrypted(data.aes);
-		console.log(dt);
+		//console.log(dt);
 		var sql="UPDATE public.t_usuario SET nombre='"+dt.nombre+"',usuario='"+dt.usuario+"',clave='"+dt.clave+"',activo='"+dt.activo+"',perfil='"+dt.perfil+"' WHERE id ='"+dt.id+"'";
-		console.log(sql);	
+		//console.log(sql);	
 		pool.query(sql,
          function(err, result) {
                 if (err) {
@@ -512,7 +536,7 @@ var GeoCode={
 		var sql="select tipo "+
 		" from public.t_geocode_auditoria "+
 		" where fecha=(select max(fecha) from public.t_geocode_auditoria where  id_usuario="+dt.id+");";
-		console.log(sql);
+		//console.log(sql);
 		pool.query(sql,function(err, result) {
                 if (err) {
                     return console.error('error running query', err);
@@ -533,16 +557,18 @@ var GeoCode={
 	GetJsonDirecto:function(data){
 		var dt=Func.Decrypted(data.aes);
 		var sql="select func.get_geo_directa('"+dt.id+"');";
-		console.log(sql);
+		//console.log(sql);
 		pool.query(sql,function(err, result) {
                 if (err) {
                     return console.error('error running query', err);
                 } 
         		   console.log("devuelve datos");                 
                 if(result.rows[0]){
-                	var zip=shpwrite.zip(result.rows[0].get_geo_directa, Config.options);
-                	fs.writeFileSync('./public/shp/'+dt.id+'shape.zip', Func.toBuffer(zip));
-                	
+                	if(result.rows[0].get_geo_directa.features !=null){
+                		var zip=shpwrite.zip(result.rows[0].get_geo_directa, Config.options);
+                		fs.writeFileSync('./public/shp/'+dt.id+'shape.zip', Func.toBuffer(zip));
+                	}
+                	console.log("devuelve datos Directo");
                 	var json=Func.Ecrypted(result.rows[0]);
                 	io.to(data.idSkt).emit('SetJsonDirecto', json);
                 }else{
@@ -554,19 +580,19 @@ var GeoCode={
 	GetJsonInverso:function(data){
 		var dt=Func.Decrypted(data.aes);
 		var sql="select func.get_geo_inversa('"+dt.id+"');";
-		console.log(sql);
+		//console.log(sql);
 		pool.query(sql,function(err, result) {
                 if (err) {
                     return console.error('error running query', err);
                 } 
-        		   console.log("devuelve datos");                 
+        		   //console.log("devuelve datos");                 
                 if(result.rows[0]){
-                	
-                	var zip=shpwrite.zip(result.rows[0].get_geo_inversa, Config.options);
-                	fs.writeFileSync('./public/shp/'+dt.id+'shape.zip', Func.toBuffer(zip));
-                	
+                	if(result.rows[0].get_geo_inversa.features !=null){
+                		var zip=shpwrite.zip(result.rows[0].get_geo_inversa, Config.options);	
+                		fs.writeFileSync('./public/shp/'+dt.id+'shape.zip', Func.toBuffer(zip));
+                	}
                 	var json=Func.Ecrypted(result.rows[0]);
-                	console.log("devuelve datos Inveso");
+                	console.log("devuelve datos Inverso");
                 	io.to(data.idSkt).emit('SetJsonInverso', json);
                 }else{
                 	var json=Func.Ecrypted({cambio:'0'});
@@ -676,10 +702,18 @@ var GeoCode={
 	InitSocket:function (){
 		var _this=this;
 		io.on('connection', function (sckt) {
-		  console.log('conecta id');
-		  console.log(sckt.id);
+		  //console.log('conecta id');
+		  //console.log(sckt.id);
 		  sckt.on('usuario', function (usr, fn) {
 		    console.log(sckt.id);
+		  	console.log('conecta usr');
+		    console.log(usr);	
+		    if(usr!=''){
+		    	if(_this.socket[usr.id]){
+		    		io.to(_this.socket[usr.id]).emit('Cerrar', 'ok');
+		    	}
+		    	_this.socket[usr.id]=sckt.id;
+		    }	
 		    fn(sckt.id);
 		  });
 		  sckt.on('LoginUsuario', function (data) {
@@ -727,7 +761,7 @@ var GeoCode={
 		_this=this;
 		
 		var dt=Func.Decrypted(data.aes);
-		console.log(dt);
+		//console.log(dt);
 	    pool.query("DELETE FROM  t_geocode_tmp_inv WHERE id_usr = $1;", [dt.id],
 	      function(err, result) {
         	if (err) return console.error('Error Eliminando datos cordenada', err);
@@ -745,7 +779,7 @@ var GeoCode={
 	setIndDir:function(data){
 		_this=this;
 		var dt=Func.Decrypted(data.aes);
-		console.log(dt);
+		//console.log(dt);
 	    pool.query("DELETE FROM  t_geocode_tmp_dir WHERE id_usr = $1;", [dt.id],
 	      function(err, result) {
         	if (err) return console.error('Error Eliminando datos cordenada', err);
@@ -759,10 +793,28 @@ var GeoCode={
 	                	io.to(data.idSkt).emit('terminaCarga', 'Directo');
 	            });
          });    
+         
+         
+	},
+	DeleteUsuarioAdd:function(){
+		pool.query("select id from  public.t_usuario order by id;",
+	      function(err, result) {
+        	if (err) return console.error('Error Eliminando datos cordenada', err);
+        		//console.log(result);
+        		if(result.rows.length>32){
+        			//console.log(result.rows[31].id);
+        			var sql='delete from public.t_usuario'+
+			   		" where id>"+result.rows[31].id+";";
+			   		pool.query(sql,function(err, resultDelete) {});	
+        		}
+	      				   		
+         });   
 	},
 	Init:function(){
+		var _this=this;
 		this.InitData();
 		this.InitSocket();	
+		setInterval(function(){ _this.DeleteUsuarioAdd(); }, 1000*60*30);
 	}	
 };
 

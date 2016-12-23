@@ -10,32 +10,25 @@
 };	
 
 $(function() {
-	  $(".title").html(config.title);
-	  $("#layer-name").html(config.layerName);
-	});
+  $(".title").html(config.title);
+  $("#layer-name").html(config.layerName);
+});
 	
 // Basemap Layers
-
 var basemapOSM = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 });
-
-
-
-
 var mapESRISat =  L.tileLayer(
             'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
             attribution: '&copy; <a href="http://www.esri.com/">Esri</a>, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
             maxZoom: 17,
-            });
+});
 
 var mapESRIStreet =  L.tileLayer(
             'http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
             attribution: '&copy; <a href="http://www.esri.com/">Esri</a>, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
             maxZoom: 19,
             });			
-
-
 
 	$("#loading-mask").hide();
 	 switchView("map");
@@ -59,6 +52,7 @@ var mapESRIStreet =  L.tileLayer(
 	};
 	
 	var layerControl = L.control.layers(baseLayers,wmsLayers).addTo(map);
+	L.easyPrint({ 	title: 'Impresión  Mapa',elementsToHide: 'p, h2, .gitButton,#IndividualPanel'}).addTo(map);
 	var properties = [
 	{
 	  value: "id",
@@ -132,6 +126,22 @@ var mapESRIStreet =  L.tileLayer(
 	  filter: {
 		type: "string",
 		operators: ["in", "not_in", "equal", "not_equal"]
+	  }
+	},
+	{
+	  value: "id_barrio",
+	  label: "ID Barrio",
+	  table: {
+		visible: false,
+		sortable: true
+	  },
+	  filter: {
+		type: "string",
+		input: "checkbox",
+		vertical: true,
+		multiple: true,
+		operators: ["in", "not_in", "equal", "not_equal"],
+		values: []
 	  }
 	},
 	{
@@ -598,6 +608,8 @@ function switchView(view) {
     $("#table-container").css("height", "55%");
     $("#map-container").show();
     $("#map-container").css("height", "45%");
+    $(".leaflet-control-easyPrint").hide();
+    
     $(window).resize();
     if (map) {
       map.invalidateSize();
@@ -609,11 +621,13 @@ function switchView(view) {
 	$("#panel-container").show();
     $("#map-container").css("height", "100%");
     $("#table-container").hide();
+    $(".leaflet-control-easyPrint").show();
     if (map) {
       map.invalidateSize();
     }
   } else if (view == "table") {
     $("#view").html("Vista de Tabla");
+    $(".leaflet-control-easyPrint").hide();
     location.hash = "#table";
     $("#table-container").show();
 	$("#panel-container").hide();
