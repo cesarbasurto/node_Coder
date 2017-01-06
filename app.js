@@ -566,7 +566,8 @@ var GeoCode={
                 if(result.rows[0]){
                 	if(result.rows[0].get_geo_directa.features !=null){
                 		var zip=shpwrite.zip(result.rows[0].get_geo_directa, Config.options);
-                		fs.writeFileSync('./public/shp/'+dt.id+'shape.zip', Func.toBuffer(zip));
+                		fs.writeFileSync(path.join(__dirname, '/public/shp/'+dt.id+'shape.zip'), Func.toBuffer(zip));
+						
                 	}
                 	console.log("devuelve datos Directo");
                 	var json=Func.Ecrypted(result.rows[0]);
@@ -588,8 +589,8 @@ var GeoCode={
         		   //console.log("devuelve datos");                 
                 if(result.rows[0]){
                 	if(result.rows[0].get_geo_inversa.features !=null){
-                		var zip=shpwrite.zip(result.rows[0].get_geo_inversa, Config.options);	
-                		fs.writeFileSync('./public/shp/'+dt.id+'shape.zip', Func.toBuffer(zip));
+                		var zip=shpwrite.zip(result.rows[0].get_geo_inversa, Config.options);
+                		fs.writeFileSync(path.join(__dirname, '/public/shp/'+dt.id+'shape.zip'), Func.toBuffer(zip));						
                 	}
                 	var json=Func.Ecrypted(result.rows[0]);
                 	console.log("devuelve datos Inverso");
